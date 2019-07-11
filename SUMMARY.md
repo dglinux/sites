@@ -4,8 +4,8 @@
 
 ## Mirrors
 
-* [Arch Linux 源](mirrors/arch-linux-yuan.md)
-* [Arch Linux CN 源](mirrors/arch-linux-cn.md)
+* [Arch Linux 源](mirrors/archlinux.md)
+* [Arch Linux CN 源](mirrors/archlinux-cn.md)
 * [CentOS 源](mirrors/centos.md)
 * [EPEL 源](mirrors/epel.md)
 * [Debian 源](mirrors/debian.md)

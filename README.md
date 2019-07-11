@@ -1,10 +1,17 @@
+---
+description: >-
+  东莞理工学院 GNU/Linux协会 开源软件镜像站 (Dongguan University of Technology GNU/Linux
+  Association Mirrors) 使用帮助。本镜像站依托于东莞理工学院，是教育网华南地区唯二的公网开源镜像站(另一为SCAU
+  Mirrors)，欢迎大家的使用。也欢迎大家为本帮助文档作出贡献。
+---
+
 # 开始
 
-## Arch Linu发行版镜像
+## 发行版镜像
 
-{% page-ref page="mirrors/arch-linux-yuan.md" %}
+{% page-ref page="mirrors/archlinux.md" %}
 
-{% page-ref page="mirrors/arch-linux-cn.md" %}
+{% page-ref page="mirrors/archlinux-cn.md" %}
 
 {% page-ref page="mirrors/centos.md" %}
 
