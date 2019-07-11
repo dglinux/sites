@@ -6,6 +6,8 @@ description: Arch Linux 中文社区仓库 （官方镜像）
 
 Arch Linux 中文社区仓库 是由 Arch Linux 中文社区驱动的非官方用户仓库，包含中文用户常用软件、工具、字体/美化包等。部分软件包的打包脚本来源于 AUR。
 
+本镜像站为Arch Linux CN 官方镜像源。
+
 ### 地址
 
 [https://mirrors.dgut.edu.cn/archlinuxcn/](https://mirrors.dgut.edu.cn/archlinuxcn/)

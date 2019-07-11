@@ -20,4 +20,5 @@
 
 * [FAQ](others/faq.md)
 * [TODO](others/todo.md)
+* [LICENSE](others/license.md)
 
