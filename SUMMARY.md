@@ -15,6 +15,7 @@
 * [Raspbian 源](mirrors/raspbian.md)
 * [Ubuntu 源](mirrors/ubuntu.md)
 * [Ubuntu Releases](mirrors/ubuntu-releases.md)
+* [Termux](mirrors/termux.md)
 
 ## Others
 
