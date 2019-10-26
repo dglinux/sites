@@ -10,20 +10,20 @@ description: Termux 是一个安卓终端模拟器以及 Linux 环境的应用�
 
 ### 使用方法
 
-1. 备份 `sources.list`: 
+STEP 1: 备份 `sources.list`: 
 
 ```bash
 cp $PREFIX/etc/apt/sources.list $PREFIX/etc/apt/sources.list.bak
 vim $PREFIX/etc/apt/sources.list
 ```
 
-2. 把源内容更改为 [https://mirrors.dgut.edu.cn/termux/](https://mirrors.dgut.edu.cn/termux/)
+STEP 2: 把源内容更改为 [https://mirrors.dgut.edu.cn/termux/](https://mirrors.dgut.edu.cn/termux/)
 
 ```bash
 deb https://mirrors.dgut.edu.cn/termux stable main
 ```
 
-3. 同步源索引
+STEP 3: 同步源索引
 
 ```bash
 apt update
