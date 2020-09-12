@@ -10,17 +10,25 @@ description: Termux 是一个安卓终端模拟器以及 Linux 环境的应用�
 
 ### 使用方法
 
-STEP 1: 备份 `sources.list`: 
+Termux 将软件包分为 `termux-apt`, `game`, `science`, `unstable`, `root`, `x11` 六个仓库，并默认启用了 `termux-apt`, `game`, `science` 仓库。更改镜像源时要同时更改这几个仓库。
+
+STEP 1: 更改主仓库源: 
 
 ```bash
 cp $PREFIX/etc/apt/sources.list $PREFIX/etc/apt/sources.list.bak
 vim $PREFIX/etc/apt/sources.list
 ```
 
-STEP 2: 把源内容更改为 [https://mirrors.dgut.edu.cn/termux/](https://mirrors.dgut.edu.cn/termux/)
+```diff
+ # The main termux repository:
+-deb https://termux.org/packages/ stable main
++deb https://mirrors.dgut.edu.cn/termux/termux-packages-24 stable main
+```
+
+STEP 2: 更改 `$PREFIX/etc/apt/sources.list.d` 下其他仓库源
 
 ```bash
-deb https://mirrors.dgut.edu.cn/termux stable main
+sed -i 's|dl.bintray.com/grimler|mirrors.dgut.edu.cn/termux|g' $PREFIX/etc/apt/sources.list.d/*.list
 ```
 
 STEP 3: 同步源索引
