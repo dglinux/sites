@@ -9,7 +9,7 @@
 STEP 1: 备份`/etc/yum.repos.d/CentOS-Base.repo`，您可以
 
 ```bash
-sudo mv /etc/yum.repos.d/CentOS-Base.repo /etc/yum.repos.d/CentOS-Base.repo.bak
+sudo cp /etc/yum.repos.d/CentOS-Base.repo /etc/yum.repos.d/CentOS-Base.repo.bak
 ```
 
 STEP 2: 根据版本号，用以下内容创建`CentOS-Base.repo`

@@ -11,7 +11,7 @@
 STEP 1: 备份`/etc/apt/sources.list`，您可以
 
 ```bash
-sudo mv /etc/apt/sources.list /etc/apt/sources.list.bak
+sudo cp /etc/apt/sources.list /etc/apt/sources.list.bak
 ```
 
 STEP 2: 执行
