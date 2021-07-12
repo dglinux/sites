@@ -28,7 +28,7 @@ vim $PREFIX/etc/apt/sources.list
 STEP 2: 更改 `$PREFIX/etc/apt/sources.list.d` 下其他仓库源
 
 ```bash
-sed -i 's|dl.bintray.com/grimler|mirrors.dgut.edu.cn/termux|g' $PREFIX/etc/apt/sources.list.d/*.list
+sed -i 's|grimler.se|mirrors.dgut.edu.cn/termux|g' $PREFIX/etc/apt/sources.list.d/*.list
 ```
 
 STEP 3: 同步源索引
