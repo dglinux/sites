@@ -4,6 +4,8 @@ description: Raspbian 是专门用于 ARM 卡片式计算机 Raspberry Pi® “�
 
 # Raspbian 源
 
+该帮助页面仅用于上游 Raspbian 系统（现在已经不再提供安装镜像）。对于树莓派基金会基于 Raspbian 开发的 Raspberry Pi OS，请见 [Raspberry Pi OS 帮助页面](raspberrypi.md#armhf-架构)。
+
 ### 地址
 
 [https://mirrors.dgut.edu.cn/raspbian/](https://mirrors.dgut.edu.cn/raspbian/)
