@@ -25,6 +25,8 @@ description: >-
 
 {% page-ref page="mirrors/raspbian.md" %}
 
+{% page-ref page="mirrors/raspberrypi.md" %}
+
 {% page-ref page="mirrors/ubuntu.md" %}
 
 {% page-ref page="mirrors/termux.md" %}

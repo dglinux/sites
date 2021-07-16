@@ -13,6 +13,7 @@
 * [Kali Linux 源](mirrors/kali-linux.md)
 * [Manjaro Linux 源](mirrors/manjaro-linux.md)
 * [Raspbian 源](mirrors/raspbian.md)
+* [Raspberry Pi OS 源](mirrors/raspberrypi.md)
 * [Ubuntu 源](mirrors/ubuntu.md)
 * [Ubuntu Releases](mirrors/ubuntu-releases.md)
 * [Termux](mirrors/termux.md)
