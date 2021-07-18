@@ -8,7 +8,9 @@
   },
   "devDependencies": {
     "@sveltejs/kit": "next",
-    "svelte": "^3.34.0"
+    "svelte": "^3.34.0",
+    "prettier": "~2.2.1",
+    "prettier-plugin-svelte": "^2.2.0"
   },
   "type": "module"
 }
