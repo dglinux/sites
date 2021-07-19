@@ -1,4 +1,3 @@
-<div class="stripe" />
 <header>
 	<a class="titlebar" href="/">
 		<img src="static/assets/logo.png" alt="DGLinux Logo" />
@@ -18,16 +17,11 @@
 </header>
 
 <style>
-	.stripe {
-		width: 100%;
-		background-color: rgb(82, 165, 14);
-		height: 5px;
-	}
 	header {
 		display: flex;
 		flex-direction: row;
 		justify-content: space-between;
-		margin: 0.7em 1em;
+		margin: 0.7em 0;
 	}
 	.titlebar,
 	nav {
@@ -57,7 +51,7 @@
 		list-style: none;
 	}
 	nav li {
-		margin-left: 1em;
+		margin-left: 1.5em;
 	}
 	nav a {
 		display: inline-block;
