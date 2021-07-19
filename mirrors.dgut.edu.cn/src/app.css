@@ -1,0 +1,20 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background: #121212;
+    color: #cccccc;
+}
+
+a {
+    color: rgb(82, 165, 14);
+    text-decoration: underline dotted rgb(82, 165, 14) 2px;
+}
+
+a:hover {
+    color: rgb(99, 201, 16);
+    text-decoration: underline dotted rgb(106, 209, 21) 2px;
+}
