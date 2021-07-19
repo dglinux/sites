@@ -1,2 +1,14 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<script context="module">
+	export async function load({ fetch }) {
+		const res = await fetch('/static/status.json');
+		const status = await res.json();
+		return { props: { status } };
+	}
+</script>
+
+<script>
+	export let status;
+	import Dashboard from '$lib/Dashboard.svelte';
+</script>
+
+<Dashboard {status} />

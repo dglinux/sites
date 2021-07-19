@@ -37,6 +37,7 @@
 		flex-direction: row;
 		flex-wrap: wrap;
 		column-gap: 2em;
+        margin: 2em 0;
 	}
 	footer > div {
 		flex: 1;
