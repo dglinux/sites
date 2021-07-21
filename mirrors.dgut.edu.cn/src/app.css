@@ -9,6 +9,13 @@ body {
     color: #cccccc;
 }
 
+@media (prefers-color-scheme: light) {
+    body {
+        background: #ffffff;
+        color: #333333;
+    }
+}
+
 a {
     color: rgb(82, 165, 14);
     text-decoration: underline dotted rgb(82, 165, 14) 2px;
@@ -17,4 +24,10 @@ a {
 a:hover {
     color: rgb(99, 201, 16);
     text-decoration: underline dotted rgb(106, 209, 21) 2px;
+}
+
+@media (max-width: 767px) {
+    .pc {
+        display: none;
+    }
 }

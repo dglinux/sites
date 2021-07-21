@@ -45,13 +45,11 @@
 	a {
 		text-decoration: none;
 	}
-	nav ul {
+	ul {
 		display: inline-flex;
 		flex-direction: row;
+		column-gap: 1.5rem;
 		list-style: none;
-	}
-	nav li {
-		margin-left: 1.5em;
 	}
 	nav a {
 		display: inline;
@@ -67,5 +65,29 @@
 	}
 	nav a:hover {
 		color: rgb(82, 165, 14);
+	}
+	@media (max-width: 767px) {
+		header {
+			flex-direction: column;
+			align-items: center;
+			row-gap: 7.5px;
+		}
+		nav {
+			flex-wrap: wrap;
+		}
+		.title {
+			font-size: 18px;
+		}
+		nav a {
+			padding: 10px 0;
+		}
+	}
+	@media (prefers-color-scheme: light) {
+		.title {
+			color: black;
+		}
+		nav a {
+			color: #384452;
+		}
 	}
 </style>

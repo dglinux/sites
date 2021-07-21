@@ -18,7 +18,7 @@
 	</thead>
 	<tbody>
 		{#each status as mirror (mirror.name)}
-			<MirrorRow mirror={mirror} />
+			<MirrorRow {mirror} />
 		{/each}
 	</tbody>
 </table>
@@ -39,5 +39,10 @@
 	}
 	thead > tr {
 		border-bottom: 1px solid #444444;
+	}
+	@media (max-width: 320px) {
+		table {
+			font-size: 0.8em;
+		}
 	}
 </style>

@@ -23,13 +23,13 @@
 		<SyncIcon status={mirror.status} />
 	</td>
 	<td>{lastUpdate}</td>
-	<td>{nextSchedule}</td>
-	<td>
+	<td class="pc">{nextSchedule}</td>
+	<td class="pc">
 		<a href={mirror.upstream}>
 			{scheme}
 		</a>
 	</td>
-	<td>{mirror.size}</td>
+	<td class="pc">{mirror.size}</td>
 	<td />
 </tr>
 
@@ -40,6 +40,12 @@
 	}
 	tr:hover {
 		background: #222;
+	}
+	@media (prefers-color-scheme: light) {
+		tr:hover {
+			background: #222;
+			color: white;
+		}
 	}
 	tr:active {
 		background: #444;
