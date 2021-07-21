@@ -1,6 +1,6 @@
 <script>
-	import MirrorRow from '$lib/MirrorRow.svelte';
 	export let status;
+	import MirrorRow from '$lib/MirrorRow.svelte';
 	status.sort((a, b) => a.name.localeCompare(b.name));
 </script>
 

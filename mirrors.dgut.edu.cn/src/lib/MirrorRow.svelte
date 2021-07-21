@@ -1,13 +1,21 @@
 <script>
-    export let mirror;
+	export let mirror;
+	import officialMirrors from '$lib/official-mirrors.js';
 	import SyncIcon from '$lib/SyncIcon.svelte';
+	import OfficialBadge from '$lib/OfficialBadge.svelte';
 
-    let success = mirror.status == 'success'
-    let scheme = mirror.upstream.split(':')[0];
+	let success = mirror.status == 'success';
+	let scheme = mirror.upstream.split(':')[0];
+	let official = officialMirrors.includes(mirror.name);
 </script>
 
 <tr>
-	<td>{mirror.name}</td>
+	<td>
+		{mirror.name}
+		{#if official}
+			<OfficialBadge />
+		{/if}
+	</td>
 	<td class:success>
 		<SyncIcon status={mirror.status} />
 	</td>

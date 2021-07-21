@@ -1,6 +1,6 @@
 <header>
 	<a class="titlebar" href="/">
-		<img src="static/assets/logo.png" alt="DGLinux Logo" />
+		<img src="assets/logo.png" alt="DGLinux Logo" />
 		<span class="title">东莞理工学院 镜像站</span>
 	</a>
 	<nav>
