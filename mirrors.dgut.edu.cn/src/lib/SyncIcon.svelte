@@ -3,10 +3,10 @@
 
 	import {
 		mdiSync, // syncing, pre-syncing
-		mdiCheck, // success
-		mdiSyncAlert, // failed
+		mdiCheckBold, // success
+		mdiExclamationThick, // failed
 		mdiPause, // paused
-		mdiSyncOff // disabled
+		mdiStop // disabled
 	} from '@mdi/js';
 	import Icon from '$lib/Icon.svelte';
 
@@ -16,13 +16,13 @@
 			case 'pre-syncing':
 				return mdiSync;
 			case 'success':
-				return mdiCheck;
+				return mdiCheckBold;
 			case 'failed':
-				return mdiSyncAlert;
+				return mdiExclamationThick;
 			case 'paused':
 				return mdiPause;
 			case 'disabled':
-				return mdiSyncOff;
+				return mdiStop;
 		}
 	}
     let icon = getIcon(status);

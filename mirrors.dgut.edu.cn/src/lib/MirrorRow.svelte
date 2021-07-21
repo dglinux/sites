@@ -19,7 +19,7 @@
 			<OfficialBadge />
 		{/if}
 	</td>
-	<td class:success>
+	<td class:success title={mirror.status}>
 		<SyncIcon status={mirror.status} />
 	</td>
 	<td>{lastUpdate}</td>
