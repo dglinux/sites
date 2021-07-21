@@ -1,11 +1,7 @@
 <script>
-	import SyncIcon from '$lib/SyncIcon.svelte';
+	import MirrorRow from '$lib/MirrorRow.svelte';
 	export let status;
-	$: sorted = status.sort((a, b) => a.name.localeCompare(b.name));
-
-	function getScheme(url) {
-		return url.split(':')[0];
-	}
+	status.sort((a, b) => a.name.localeCompare(b.name));
 </script>
 
 <table>
@@ -21,22 +17,8 @@
 		</tr>
 	</thead>
 	<tbody>
-		{#each sorted as mirror (mirror.name)}
-			<tr>
-				<td>{mirror.name}</td>
-				<td class:success={mirror.status == 'success'}>
-					<SyncIcon status={mirror.status} />
-				</td>
-				<td>{mirror.last_update}</td>
-				<td>{mirror.next_schedule}</td>
-				<td>
-					<a href={mirror.upstream}>
-						{getScheme(mirror.upstream)}
-					</a>
-				</td>
-				<td>{mirror.size}</td>
-				<td />
-			</tr>
+		{#each status as mirror (mirror.name)}
+			<MirrorRow mirror={mirror} />
 		{/each}
 	</tbody>
 </table>
@@ -47,7 +29,6 @@
 		border-spacing: 0;
 		width: 100%;
 	}
-	td,
 	th {
 		text-align: center;
 		padding: 0.5em 1em;
@@ -58,18 +39,5 @@
 	}
 	thead > tr {
 		border-bottom: 1px solid #444444;
-	}
-	tbody > tr {
-		cursor: pointer;
-		font-size: 0.95em;
-	}
-	tbody > tr:hover {
-		background: #222;
-	}
-	tbody > tr:active {
-		background: #444;
-	}
-	.success {
-		color: rgb(99, 201, 16);
 	}
 </style>
