@@ -11,4 +11,12 @@
 	import Dashboard from '$lib/Dashboard.svelte';
 </script>
 
-<Dashboard {status} />
+<div>
+	<Dashboard {status} />
+</div>
+
+<style>
+	div {
+		overflow-x: auto;
+	}
+</style>
