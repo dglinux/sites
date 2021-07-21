@@ -3,10 +3,13 @@
 	import officialMirrors from '$lib/official-mirrors.js';
 	import SyncIcon from '$lib/SyncIcon.svelte';
 	import OfficialBadge from '$lib/OfficialBadge.svelte';
+	import fromNow from '$lib/from-now.js';
 
-	let success = mirror.status == 'success';
-	let scheme = mirror.upstream.split(':')[0];
 	let official = officialMirrors.includes(mirror.name);
+	let success = mirror.status == 'success';
+	let lastUpdate = fromNow(mirror.last_update_ts);
+	let nextSchedule = fromNow(mirror.next_schedule_ts);
+	let scheme = mirror.upstream.split(':')[0];
 </script>
 
 <tr>
@@ -19,8 +22,8 @@
 	<td class:success>
 		<SyncIcon status={mirror.status} />
 	</td>
-	<td>{mirror.last_update}</td>
-	<td>{mirror.next_schedule}</td>
+	<td>{lastUpdate}</td>
+	<td>{nextSchedule}</td>
 	<td>
 		<a href={mirror.upstream}>
 			{scheme}

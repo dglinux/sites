@@ -21,7 +21,7 @@
 		display: flex;
 		flex-direction: row;
 		justify-content: space-between;
-		margin: 0.7em 0;
+		margin: 1.05em 0;
 	}
 	.titlebar,
 	nav {
@@ -54,7 +54,7 @@
 		margin-left: 1.5em;
 	}
 	nav a {
-		display: inline-block;
+		display: inline;
 		text-transform: uppercase;
 		color: #ddd;
 		font-weight: 700;
