@@ -1,19 +1,24 @@
 <script>
 	export let sections;
+	import Article from '$lib/Article.svelte';
 	import { page } from '$app/stores';
-	$: currentFile = $page.path.split('/')[2];
+	$: [currentSection, currentFile] = $page.path.split('/').slice(2);
 </script>
 
 <div>
 	<ul class="helpnav">
-		<li><a href="/help" class:active={!currentFile}>开始</a></li>
+		<li><a href="/help" class:active={!currentSection}>开始</a></li>
 		{#each sections as { section, files } (section)}
 			<li class="section">
 				<h2>{section}</h2>
 				<ul>
 					{#each files as file (file)}
 						<li>
-							<a sveltekit:prefetch href={`/help/${file}`} class:active={currentFile == file}>
+							<a
+								sveltekit:prefetch
+								href={`/help/${section}/${file}`}
+								class:active={currentSection === section && currentFile === file}
+							>
 								{file}
 							</a>
 						</li>
@@ -22,9 +27,9 @@
 			</li>
 		{/each}
 	</ul>
-	<article>
+	<Article>
 		<slot />
-	</article>
+	</Article>
 </div>
 
 <style>
@@ -42,7 +47,7 @@
 	h2 {
 		text-transform: uppercase;
 		font-size: 0.75em;
-        font-weight: 700;
+		font-weight: 700;
 		padding: 0 1rem;
 		margin-bottom: 0.5em;
 		opacity: 0.7;
