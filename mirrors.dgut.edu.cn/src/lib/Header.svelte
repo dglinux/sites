@@ -1,6 +1,11 @@
+<script>
+	import { page } from '$app/stores';
+	$: section = $page.path.split('/')[1];
+</script>
+
 <header>
 	<a class="titlebar" href="/">
-		<img src="assets/logo.png" alt="DGLinux Logo" />
+		<img src="/assets/logo.png" alt="DGLinux Logo" />
 		<span class="title">东莞理工学院 镜像站</span>
 	</a>
 	<nav>
@@ -8,9 +13,11 @@
 			<li><a href="https://linux.dgut.edu.cn/">Home</a></li>
 			<li><a href="https://linux.dgut.edu.cn/blog.html">Blog</a></li>
 			<li><a href="https://t.me/dgutlinux/">Channel</a></li>
-			<li><a href="https://help.mirrors.dglinux.com/">Wiki</a></li>
-			<li class="active">
-				<a href="https://mirrors.dgut.edu.cn/">Mirrors</a>
+			<li class:active={section == 'help'}>
+				<a href="/help">Wiki</a>
+			</li>
+			<li class:active={section == ''}>
+				<a href="/">Mirrors</a>
 			</li>
 		</ul>
 	</nav>

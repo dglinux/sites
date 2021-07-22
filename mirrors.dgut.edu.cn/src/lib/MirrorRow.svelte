@@ -19,7 +19,7 @@
 
 <tr on:click|stopPropagation={rowclick}>
 	<td class="name">
-		<a href={url}>{mirror.name}</a>
+		<a rel="external" href={url}>{mirror.name}</a>
 		{#if official}
 			<OfficialBadge />
 		{/if}
@@ -30,7 +30,7 @@
 	<td>{lastUpdate}</td>
 	<td class="pc">{nextSchedule}</td>
 	<td class="pc">
-		<a href={mirror.upstream}>
+		<a rel="external" href={mirror.upstream}>
 			{scheme}
 		</a>
 	</td>
