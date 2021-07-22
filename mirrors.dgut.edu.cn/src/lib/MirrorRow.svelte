@@ -1,5 +1,6 @@
 <script>
 	export let mirror;
+	export let hasHelp;
 	import officialMirrors from '$lib/official-mirrors.js';
 	import SyncIcon from '$lib/SyncIcon.svelte';
 	import OfficialBadge from '$lib/OfficialBadge.svelte';
@@ -11,13 +12,9 @@
 	let lastUpdate = fromNow(mirror.last_update_ts);
 	let nextSchedule = fromNow(mirror.next_schedule_ts);
 	let scheme = mirror.upstream.split(':')[0];
-
-	function rowclick() {
-		window.location = url;
-	}
 </script>
 
-<tr on:click|stopPropagation={rowclick}>
+<tr>
 	<td class="name">
 		<a rel="external" href={url}>{mirror.name}</a>
 		{#if official}
@@ -35,19 +32,19 @@
 		</a>
 	</td>
 	<td class="pc">{mirror.size}</td>
-	<td />
+	<td>
+		{#if hasHelp}
+			<a sveltekit:prefetch href={`/help/mirrors/${mirror.name}`}>help</a>
+		{/if}
+	</td>
 </tr>
 
 <style>
 	tr {
 		font-size: 0.95em;
-		cursor: pointer;
 	}
 	tr:hover {
 		background: #222;
-	}
-	tr:active {
-		background: #444;
 	}
 	td {
 		text-align: center;

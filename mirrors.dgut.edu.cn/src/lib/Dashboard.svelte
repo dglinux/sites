@@ -1,7 +1,9 @@
 <script>
 	export let status;
+	export let help;
 	import MirrorRow from '$lib/MirrorRow.svelte';
 	status.sort((a, b) => a.name.localeCompare(b.name));
+	let mirrorsHelp = help.find((section) => section.section === 'mirrors').files;
 </script>
 
 <table>
@@ -18,7 +20,7 @@
 	</thead>
 	<tbody>
 		{#each status as mirror (mirror.name)}
-			<MirrorRow {mirror} />
+			<MirrorRow {mirror} hasHelp={mirrorsHelp.includes(mirror.name)} />
 		{/each}
 	</tbody>
 </table>

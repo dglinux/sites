@@ -69,6 +69,9 @@
 		border: solid 1px transparent;
 	}
 	a:hover {
+		background: #222;
+	}
+	a:active {
 		background: #444;
 	}
 	.active {
