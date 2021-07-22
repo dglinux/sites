@@ -1,5 +1,5 @@
 {
-  "name": "~TODO~",
+  "name": "@dglinux/mirrors.dgut.edu.cn",
   "version": "0.0.1",
   "scripts": {
     "dev": "svelte-kit dev",
