@@ -34,12 +34,12 @@
 
 <style>
 	.helpnav {
-		width: 18%;
-		margin-right: 1em;
+		width: 16%;
 	}
 	div {
 		display: flex;
 		flex-direction: row;
+        justify-content: space-between;
 	}
 	ul {
 		list-style: none;
@@ -75,5 +75,8 @@
 		color: rgb(82, 165, 14);
 		background: #080808;
 		border: solid 1px;
+	}
+	div > :global(article) {
+		width: calc(100% - 16% - 2em);
 	}
 </style>

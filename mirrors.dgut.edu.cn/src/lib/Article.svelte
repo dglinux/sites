@@ -11,6 +11,10 @@
 			--border-color: #6d6d6d;
 		}
 	}
+	article :global(ul),
+	article :global(ol) {
+		padding-left: 40px;
+	}
 	article :global(div.table-container) {
 		width: 100%;
 		overflow-x: auto;
@@ -190,8 +194,10 @@
 		padding: 1rem;
 		border-radius: 0.3em;
 		background: #272822;
-		font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
 		overflow: auto;
+	}
+	article :global(code) {
+		font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
 	}
 
 	article :global(pre),
