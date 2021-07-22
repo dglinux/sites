@@ -1,6 +1,6 @@
 <script context="module">
 	export async function load({ fetch }) {
-		const res = await fetch('/static/status.json');
+		const res = await fetch('https://mirrors.dgut.edu.cn/static/status.json');
 		const status = await res.json();
 		return { props: { status } };
 	}

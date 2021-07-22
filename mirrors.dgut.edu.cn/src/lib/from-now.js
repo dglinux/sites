@@ -26,5 +26,5 @@ export default function fromNow(unix) {
   if (abs >= m) {
     return format(delta, abs, m, 'minute');
   }
-  return delta > 0 ? 'just now' : 'soon';
+  return delta > 0 ? 'soon' : 'just now';
 }

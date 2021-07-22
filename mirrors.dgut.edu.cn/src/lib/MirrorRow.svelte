@@ -5,16 +5,21 @@
 	import OfficialBadge from '$lib/OfficialBadge.svelte';
 	import fromNow from '$lib/from-now.js';
 
+	let url = `/${mirror.name}/`;
 	let official = officialMirrors.includes(mirror.name);
 	let success = mirror.status == 'success';
 	let lastUpdate = fromNow(mirror.last_update_ts);
 	let nextSchedule = fromNow(mirror.next_schedule_ts);
 	let scheme = mirror.upstream.split(':')[0];
+
+	function rowclick() {
+		window.location = url;
+	}
 </script>
 
-<tr>
-	<td>
-		{mirror.name}
+<tr on:click|stopPropagation={rowclick}>
+	<td class="name">
+		<a href={url}>{mirror.name}</a>
 		{#if official}
 			<OfficialBadge />
 		{/if}
@@ -35,17 +40,11 @@
 
 <style>
 	tr {
-		cursor: pointer;
 		font-size: 0.95em;
+		cursor: pointer;
 	}
 	tr:hover {
 		background: #222;
-	}
-	@media (prefers-color-scheme: light) {
-		tr:hover {
-			background: #222;
-			color: white;
-		}
 	}
 	tr:active {
 		background: #444;
@@ -55,7 +54,21 @@
 		padding: 0.5em 1em;
 		white-space: nowrap;
 	}
+	.name > a {
+		color: inherit;
+		text-decoration: none;
+	}
+	.name > a:hover {
+		color: #fff;
+		text-decoration: underline;
+	}
 	.success {
 		color: rgb(99, 201, 16);
+	}
+	@media (prefers-color-scheme: light) {
+		tr:hover {
+			background: #222;
+			color: white;
+		}
 	}
 </style>
