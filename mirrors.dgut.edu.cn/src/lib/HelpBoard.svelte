@@ -1,9 +1,38 @@
 <script>
 	export let sections;
 	import Article from '$lib/Article.svelte';
+	import { goto } from '$app/navigation';
 	import { page } from '$app/stores';
 	$: [currentSection, currentFile] = $page.path.split('/').slice(2);
+
+	function navigate(e) {
+		if (e.target.value) {
+			goto(`/help/${e.target.value}`);
+		} else {
+			goto('/help');
+		}
+	}
 </script>
+
+<label>
+	帮助主题
+	<!-- svelte-ignore a11y-no-onchange -->
+	<select on:change={navigate}>
+		<option value="" selected={!currentSection}>开始</option>
+		{#each sections as { section, files } (section)}
+			<optgroup label={section}>
+				{#each files as file (file)}
+					<option
+						value={`${section}/${file}`}
+						selected={currentSection === section && currentFile === file}
+					>
+						{file}
+					</option>
+				{/each}
+			</optgroup>
+		{/each}
+	</select>
+</label>
 
 <div>
 	<ul class="helpnav">
@@ -33,13 +62,29 @@
 </div>
 
 <style>
+	label {
+		display: none;
+		margin: 0.5em 0;
+		font-size: 0.8em;
+	}
+	select {
+		background-image: none;
+		background-color: inherit;
+		color: inherit;
+		padding: 0.5em 1em;
+		border: solid 1px;
+		border-radius: 0.2em;
+        font-size: 1em;
+		width: calc(100% - 5em);
+	}
 	.helpnav {
 		width: 16%;
+		display: block;
 	}
 	div {
 		display: flex;
 		flex-direction: row;
-        justify-content: space-between;
+		justify-content: space-between;
 	}
 	ul {
 		list-style: none;
@@ -81,5 +126,30 @@
 	}
 	div > :global(article) {
 		width: calc(100% - 16% - 2em);
+	}
+	@media (prefers-color-scheme: light) {
+		a:hover {
+			background: #efefef;
+		}
+		a:active {
+			background: #ddd;
+		}
+		.active {
+			background: #eee;
+		}
+	}
+	@media (max-width: 767px) {
+		label {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			justify-content: space-between;
+		}
+		.helpnav {
+			display: none;
+		}
+		div > :global(article) {
+			width: 100%;
+		}
 	}
 </style>

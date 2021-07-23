@@ -64,8 +64,10 @@
 	}
 	@media (prefers-color-scheme: light) {
 		tr:hover {
-			background: #222;
-			color: white;
+			background: #efefef;
+		}
+		.name > a:hover {
+			color: #000;
 		}
 	}
 </style>
