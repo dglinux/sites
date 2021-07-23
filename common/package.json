@@ -1,5 +1,8 @@
 {
   "name": "@dglinux/sites-common",
   "version": "0.0.1",
-  "main": "index.js"
+  "main": "index.js",
+  "devDependencies": {
+    "svelte": "^3.34.0"
+  }
 }

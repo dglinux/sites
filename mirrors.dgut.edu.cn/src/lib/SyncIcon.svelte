@@ -8,7 +8,7 @@
 		mdiPause, // paused
 		mdiStop // disabled
 	} from '@mdi/js';
-	import Icon from '$lib/Icon.svelte';
+	import Icon from '@dglinux/sites-common/lib/Icon.svelte';
 
 	function getIcon(status) {
 		switch (status) {

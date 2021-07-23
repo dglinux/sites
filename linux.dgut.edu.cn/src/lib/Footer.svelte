@@ -1,21 +1,25 @@
 <footer>
 	<div>
-		<h3>Links</h3>
+		<h3>Join</h3>
+		<ul>
+			<li>Telegram <a href="https://t.me/dgutlug">@dgutlug</a></li>
+			<li>QQ <a href="https://jq.qq.com/?_wv=1027&k=5Tw7Nao">261795035</a></li>
+			<li>
+				Libera.Chat <a href="https://web.libera.chat/?chan=#dglinux">#dglinux</a>
+				<sup><a href="irc://irc.libera.chat/#dglinux">IRC://</a></sup>
+			</li>
+			<li>GitHub <a href="https://github.com/dglinux">@dglinux</a></li>
+		</ul>
 		<p>
-			<a href="https://github.com/dglinux/issues/issues/new">
-				<b>镜像请求/反馈 New Mirror/Issues</b>
-			</a>
-		</p>
-		<p>
-			<a href="https://help.mirrors.dglinux.com/"><b>使用帮助 Help</b></a>
+			招新将于每学年的第一学期进行，请留意学生社团发展中心的通知。也可<a href="/blog/feed.xml">订阅本站的 Feed</a>。
 		</p>
 	</div>
 	<div>
 		<h3>Introduction</h3>
 		<p>
-			东莞理工学院 GNU/Linux 协会 开源软件镜像站 (Dongguan University of Technology GNU/Linux
-			Association Mirror) 在黄培灿老师的带领下成立于 2016
-			年。开源软件镜像站依托于东莞理工学院，部署于教育网华南地区，旨在为莞工师生及华南地区开源软件使用者用户提供优质的开源软件镜像服务。
+			东莞理工学院 GNU/Linux 协会在黄培灿老师的带领下成立于 2005 年 10 月，旨在联合东莞理工的
+			GNU/Linux
+			使用者，搭建信息交流共享的平台，宣传自由软件的精神，提高自由软件开源社区文化氛围，推广自由软件在校园的应用。推动整个学校开源事业的发展。
 		</p>
 	</div>
 	<div>
@@ -23,10 +27,6 @@
 		<p>
 			Copyleft &copy; 2005-2021 Dongguan University of Technology GNU/Linux Association
 			<a href="https://linux.dgut.edu.cn/">(Dglinux)</a>
-		</p>
-		<p>
-			欲参阅教育网主要镜像站列表，请访问
-			<a href="https://mirrorz.org/site/DGUT"><b><em>mirrorZ</em></b></a> 项目。
 		</p>
 	</div>
 </footer>
@@ -54,6 +54,10 @@
 	}
 	h3:hover::before {
 		color: rgb(99, 201, 16);
+	}
+	ul {
+		margin-top: 1em;
+		padding-left: 1em;
 	}
 	p {
 		margin-top: 1em;
