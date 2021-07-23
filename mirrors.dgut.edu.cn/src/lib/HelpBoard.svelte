@@ -74,7 +74,7 @@
 		padding: 0.5em 1em;
 		border: solid 1px;
 		border-radius: 0.2em;
-        font-size: 1em;
+		font-size: 1em;
 		width: calc(100% - 5em);
 	}
 	.helpnav {

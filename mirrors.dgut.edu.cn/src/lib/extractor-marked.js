@@ -1,27 +1,24 @@
-import marked from 'marked'
-const defaultRenderer = new marked.Renderer()
+import marked from 'marked';
+const defaultRenderer = new marked.Renderer();
 
 function removeTags(string) {
-	return string.replace(/<[^ ][^>]*>/g, '')
-		.replace(/<\/[^>]*>/g, '')
+	return string.replace(/<[^ ][^>]*>/g, '').replace(/<\/[^>]*>/g, '');
 }
 
 function extractorMarked(markdown, absoluteUrl) {
-	const extractorRenderer = new marked.Renderer()
+	const extractorRenderer = new marked.Renderer();
 
-	let title = null
+	let title = null;
 
 	// Make table horizontally scrollable
 	extractorRenderer.table = (header, body) => {
-		return '<div class="table-container">' +
-			defaultRenderer.table(header, body) +
-			'</div>'
-	}
+		return '<div class="table-container">' + defaultRenderer.table(header, body) + '</div>';
+	};
 
 	// Rewrite relative links to absolute links
 	extractorRenderer.link = (href, title, text) => {
 		if (href.endsWith('.md') && !href.startsWith('/') && !href.includes('://')) {
-			href = href.replace(/\.md$/, '')
+			href = href.replace(/\.md$/, '');
 			let absSeg = absoluteUrl.split('/');
 			let hrefSeg = href.split('/');
 			absSeg.pop();
@@ -42,23 +39,23 @@ function extractorMarked(markdown, absoluteUrl) {
 			href = absSeg.concat(hrefSeg).join('/');
 		}
 		return defaultRenderer.link(href, title, text);
-	}
+	};
 
 	// Extract the title
 	extractorRenderer.heading = (text, level, raw, slugger) => {
 		if (level == 1 && !title) {
-			title = removeTags(text)
+			title = removeTags(text);
 		}
-		const slug = slugger.slug(raw)
-		return `<h${level} id="${slug}">${text}</h${level}>\n`
-	}
+		const slug = slugger.slug(raw);
+		return `<h${level} id="${slug}">${text}</h${level}>\n`;
+	};
 
-	const html = marked(markdown, { renderer: extractorRenderer })
+	const html = marked(markdown, { renderer: extractorRenderer });
 
 	return {
 		html,
 		title
-	}
+	};
 }
 
-export default extractorMarked
+export default extractorMarked;

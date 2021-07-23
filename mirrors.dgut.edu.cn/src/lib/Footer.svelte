@@ -37,12 +37,12 @@
 		flex-direction: row;
 		flex-wrap: wrap;
 		column-gap: 2em;
-        margin-top: 2em
+		margin-top: 2em;
 	}
 	footer > div {
 		flex: 1;
 		min-width: 14em;
-        margin-bottom: 2em
+		margin-bottom: 2em;
 	}
 	h3 {
 		letter-spacing: 0.5px;

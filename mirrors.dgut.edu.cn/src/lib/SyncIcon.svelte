@@ -25,8 +25,8 @@
 				return mdiStop;
 		}
 	}
-    let icon = getIcon(status);
-    let spin= status.includes('syncing');
+	let icon = getIcon(status);
+	let spin = status.includes('syncing');
 </script>
 
-<Icon icon={icon} spin={spin} />
+<Icon {icon} {spin} />

@@ -1,5 +1,6 @@
 .svelte-kit/**
-static/**
+root/**
 build/**
 node_modules/**
 package.json
+help/**

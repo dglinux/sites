@@ -18,7 +18,7 @@
 </script>
 
 <svelte:head>
-    <title>DGUT Open Source Software Mirrors</title>
+	<title>DGUT Open Source Software Mirrors</title>
 </svelte:head>
 <div>
 	<Dashboard {status} {help} />

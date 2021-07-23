@@ -11,7 +11,7 @@
 </script>
 
 <svelte:head>
-    <title>使用帮助 - DGUT Open Source Software Mirrors</title>
+	<title>使用帮助 - DGUT Open Source Software Mirrors</title>
 </svelte:head>
 <HelpBoard {sections}>
 	<h1>东莞理工学院镜像站使用帮助</h1>

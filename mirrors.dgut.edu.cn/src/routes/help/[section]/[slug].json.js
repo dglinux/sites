@@ -10,7 +10,7 @@ export async function get(request) {
 	} catch (err) {
 		return {
 			status: 404
-		}
+		};
 	}
 	const { html, title } = extractorMarked(md, `/${url}`);
 	return {
@@ -19,5 +19,5 @@ export async function get(request) {
 			html,
 			title
 		}
-	}
+	};
 }
