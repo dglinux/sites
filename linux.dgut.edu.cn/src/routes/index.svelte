@@ -47,6 +47,7 @@
 		justify-content: center;
 		margin: 5em 0;
 		column-gap: 1.5em;
+		row-gap: 1em;
 		flex-wrap: wrap;
 	}
 	a {

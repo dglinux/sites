@@ -4,5 +4,8 @@
   "main": "index.js",
   "devDependencies": {
     "svelte": "^3.34.0"
+  },
+  "dependencies": {
+    "marked": "^2.1.3"
   }
 }

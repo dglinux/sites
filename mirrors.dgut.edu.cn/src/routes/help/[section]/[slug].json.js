@@ -1,5 +1,5 @@
 import fs from 'fs';
-import extractorMarked from '$lib/extractor-marked';
+import extractorMarked from '@dglinux/sites-common/lib/extractor-marked';
 
 export async function get(request) {
 	const { section, slug } = request.params;
@@ -12,12 +12,12 @@ export async function get(request) {
 			status: 404
 		};
 	}
-	const { html, title } = extractorMarked(md, `/${url}`);
+	const { html, metadata } = extractorMarked(md, `/${url}`);
 	return {
 		status: 200,
 		body: {
 			html,
-			title
+			title: metadata.title
 		}
 	};
 }

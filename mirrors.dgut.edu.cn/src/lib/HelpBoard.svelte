@@ -1,6 +1,6 @@
 <script>
 	export let sections;
-	import Article from '$lib/Article.svelte';
+	import Article from '@dglinux/sites-common/lib/Article.svelte';
 	import { goto } from '$app/navigation';
 	import { page } from '$app/stores';
 	$: [currentSection, currentFile] = $page.path.split('/').slice(2);

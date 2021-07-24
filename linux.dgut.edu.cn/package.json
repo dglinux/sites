@@ -17,6 +17,7 @@
   "type": "module",
   "dependencies": {
     "@dglinux/sites-common": "link:../common",
-    "@mdi/js": "^5.9.55"
+    "@mdi/js": "^5.9.55",
+    "marked": "^2.1.3"
   }
 }
