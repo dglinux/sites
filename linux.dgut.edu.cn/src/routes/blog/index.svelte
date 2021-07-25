@@ -15,7 +15,9 @@
 </svelte:head>
 <div>
 	{#each posts as info (info.url)}
-		<ArticleInfo {info} />
+		<article>
+			<ArticleInfo {info} />
+		</article>
 	{/each}
 </div>
 
@@ -24,21 +26,25 @@
 		max-width: 40em;
 		margin: 2.5em auto 4em auto;
 	}
-	div :global(article h2) {
+	article {
+		margin-bottom: 3em;
+		page-break-inside: avoid;
+	}
+	article :global(h2) {
 		font-size: 1.5em;
 	}
-	div :global(article:first-child h2) {
+	article:first-child :global(h2) {
 		font-size: 2.4em;
 	}
-	div :global(article:first-child::before) {
+	article:first-child::before {
 		content: '最新文章';
 	}
-	div :global(article:nth-child(2)::before) {
+	article:nth-child(2)::before {
 		content: '往期文章';
 		margin-top: 3em;
 	}
-	div :global(article:first-child::before),
-	div :global(article:nth-child(2)::before) {
+	article:first-child::before,
+	article:nth-child(2)::before {
 		letter-spacing: 0.5px;
 		opacity: 0.7;
 		display: block;

@@ -4,22 +4,17 @@
 	import ArticleMetadata from '$lib/ArticleMetadata.svelte';
 </script>
 
-<article>
-	<a sveltekit:prefetch href={info.url}>
-		<h2>{title}</h2>
-	</a>
-	{#if excerpt}
-		<p>{excerpt}</p>
-	{/if}
-	<div>
-		<ArticleMetadata {category} {author} {date} />
-	</div>
-</article>
+<a sveltekit:prefetch href={info.url}>
+	<h2>{title}</h2>
+</a>
+{#if excerpt}
+	<p>{excerpt}</p>
+{/if}
+<div>
+	<ArticleMetadata {category} {author} {date} />
+</div>
 
 <style>
-	article {
-		margin-bottom: 3em;
-	}
 	a {
 		text-decoration: none;
 	}
