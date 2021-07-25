@@ -1,8 +1,7 @@
 ---
 title: 分享会预告 | Web渗透测试_实战
-layout: post
 author: dgtao
-category: Penetration
+category: event
 excerpt: 分享会预告：Web渗透测试以及实战
 ---
 技术分享会，它又来了。
@@ -18,8 +17,6 @@ excerpt: 分享会预告：Web渗透测试以及实战
  ●  地   点： **8B306**  
 
  ●  主讲人： **菜夹膜**   
-
-![](/assets/linuxTwo/one.png)
 
 ---
 
@@ -47,10 +44,7 @@ excerpt: 分享会预告：Web渗透测试以及实战
    （使用的工具是Burp Suite，需要环境JDK8↑ ）  
 
 ​               [课程资料下载](http://pan.dgut.edu.cn/drive/share/open_sharepage/6f3e1fda-b2fe-4b63-9ab5-be2a76f04144:bingosoft)  
->
-![](/assets/linuxTwo/two.png)  
 
----
 
 ## 关于直播
 
@@ -58,7 +52,6 @@ excerpt: 分享会预告：Web渗透测试以及实战
 
  [linux.dgut.edu.cn/live]( linux.dgut.edu.cn/live )
 
-![](/assets/linuxTwo/three.jpg)
 
 ---
 

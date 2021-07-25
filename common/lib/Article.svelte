@@ -34,9 +34,14 @@
 
 	article :global(blockquote) {
 		padding: 1px 25px;
-		color: #555;
+		color: #aaa;
 		border-left: solid 4px #ccc;
 		margin: 8px 0;
+	}
+	@media (prefers-color-scheme: light) {
+		article :global(blockquote) {
+			color: #555;
+		}
 	}
 
 	article :global(h1) {
@@ -123,12 +128,11 @@
 	}
 
 	article :global(hr) {
-		width: 85%;
+		width: 100%;
 		border: 0;
 		height: 0;
 		border-top: 1px solid #999;
-		margin-top: 0.3em;
-		margin-bottom: 1.3em;
+		margin: 0.3em 0 1.3em 0;
 	}
 
 	@media (prefers-color-scheme: light) {
@@ -193,7 +197,7 @@
 		overflow: auto;
 	}
 	article :global(code) {
-		font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+		font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
 	}
 
 	article :global(pre),

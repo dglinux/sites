@@ -1,16 +1,13 @@
 ---
-layout: post
 title: 回顾 | Web渗透测试以及实战
-category: web 
+category: event
 author: dgtao
 excerpt: 分享会回顾：Web渗透测试以及实战
 ---
 
 
 
-# 回顾 | Web渗透测试以及实战
 
----
 
 主讲人：菜夹膜  
 
@@ -22,17 +19,13 @@ excerpt: 分享会回顾：Web渗透测试以及实战
 
 [课程资料](http://pan.dgut.edu.cn/drive/share/open_sharepage/ae4b6c53-2428-4d06-8cc8-eada8886b1e5:bingosoft)
 
-![感谢菜夹膜dalao](/assets/linuxthree/one.jpg)
+![感谢菜夹膜dalao](/assets/penetration-1/kenway.jpg)
 
----
 
 ## 分享会流程
 
 首先，向大家介绍黑客一词的起源，从而向大家介绍最大的黑客组织匿名者Anonymous，以及其的一些光辉事迹。 当然，大家可能第一次接触黑客一词是从影视中开始的，好比说，The Matrix，MR.ROBOT，以及热剧 亲爱的热爱的 等等等，这些影剧都是对“黑客”的一种呈现。
 
-![web](/assets/linuxthree/six.png)
-
----
 
 ### Web简单入门
 
@@ -50,9 +43,8 @@ excerpt: 分享会回顾：Web渗透测试以及实战
 
 大家可以使用开发者工具查看网页的源码，进行一些网页参数的修改等等等，更多的用法等您去探索.....
 
-![DGLINUX](/assets/linuxthree/two.png)
+![DGLINUX](/assets/penetration-1/cas.jpg)
 
----
 
 ### Burp Suite 安装使用
 
@@ -71,7 +63,7 @@ excerpt: 分享会回顾：Web渗透测试以及实战
 
 Burp Suite 是用于攻击Web应用程序的集成平台，包含了多种工具。具体使用教程大家可以查询相关文档，遇到的问题可以群里讨论。
 
-![Burp Suite](/assets/linuxthree/three.png)
+![Burp Suite](/assets/penetration-1/burp-suite.png)
 
 ### Sqlmap 安装使用
 
@@ -79,7 +71,7 @@ Burp Suite 是用于攻击Web应用程序的集成平台，包含了多种工具
 
  相关指令参数的介绍：
 
-**Python .\sqlmap.py**
+`python sqlmap.py`
 
 >- **-h**                     获得脚本的帮助提示
 >
@@ -105,7 +97,7 @@ Burp Suite 是用于攻击Web应用程序的集成平台，包含了多种工具
 
 Sqlmap是开源的自动化SQL注入工具，完全支持 MySQL、Oracle、PostgreSQL.....等多种数据库管理系统，可以提供一个简单的URL，Burp或WebScarab请求日志文件，文本文档中的完整http请求或者Google的搜索，匹配出结果页面，也可以自己定义一个正则来判断那个地址去测试......等等，更多应用感兴趣的小伙伴可自行探索。。。
 
-![SQLMAP](/assets/linuxthree/five.png)
+![SQLMAP](/assets/penetration-1/sqlmap.png)
 
 ---
 
@@ -114,5 +106,3 @@ Sqlmap是开源的自动化SQL注入工具，完全支持 MySQL、Oracle、Postg
 当然遇到啥问题，可以发群里面讨论！
 
 告辞
-
-![告辞](/assets/linuxthree/four.gif)
