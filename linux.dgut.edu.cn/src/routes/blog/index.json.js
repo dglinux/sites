@@ -2,11 +2,11 @@ import fs from 'fs';
 import extractorMarked from '@dglinux/sites-common/lib/extractor-marked';
 
 function dateToTime(date) {
-	return (new Date(...date)).getTime();
+	return new Date(...date).getTime();
 }
 
 export async function get(request) {
-	const files = (await fs.promises.readdir('blog'));
+	const files = await fs.promises.readdir('blog');
 	const posts = await Promise.all(
 		files.map(async (post) => {
 			const [year, month, date, ...words] = post.split('-');
@@ -21,10 +21,9 @@ export async function get(request) {
 			};
 		})
 	);
-	posts.sort((a, b) =>
-		dateToTime(b.metadata.date) - dateToTime((a.metadata.date)));
+	posts.sort((a, b) => dateToTime(b.metadata.date) - dateToTime(a.metadata.date));
 	return {
 		status: 200,
 		body: posts
-	}
+	};
 }
