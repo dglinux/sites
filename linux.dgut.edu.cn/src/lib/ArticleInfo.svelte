@@ -1,11 +1,7 @@
 <script>
 	export let info;
-	let { title, excerpt, category, author } = info.metadata;
-	let date = new Date(...info.metadata.date).toLocaleDateString('zh-CN', {
-		year: 'numeric',
-		month: 'long',
-		day: 'numeric'
-	});
+	let { title, excerpt, category, author, date } = info.metadata;
+	import ArticleMetadata from '$lib/ArticleMetadata.svelte';
 </script>
 
 <article>
@@ -16,9 +12,7 @@
 		<p>{excerpt}</p>
 	{/if}
 	<div>
-		<a sveltekit:prefetch href={`/blog/${category}`}>{category}</a>
-		<span>By {author}</span>
-		<span>{date}</span>
+		<ArticleMetadata {category} {author} {date} />
 	</div>
 </article>
 
@@ -33,13 +27,6 @@
 		font-weight: 500;
 		line-height: 1;
 		margin-bottom: 0.3em;
-	}
-	div {
-		text-transform: uppercase;
-		font-size: 0.8em;
-	}
-	span {
-		margin-left: 1em;
 	}
 	p {
 		font-size: 1em;

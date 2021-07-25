@@ -3,6 +3,10 @@ import extractorMarked from '@dglinux/sites-common/lib/extractor-marked';
 
 export async function get(request) {
 	const { section, slug } = request.params;
+	// Prevent injection
+	if (!(/[A-Za-z\-]+/.test(section))) {
+		return { status: 404 };
+	}
 	const url = `help/${section}/${slug}.md`;
 	let md;
 	try {
