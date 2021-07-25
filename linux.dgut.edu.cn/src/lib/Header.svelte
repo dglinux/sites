@@ -47,7 +47,7 @@
 	.title {
 		margin-left: 0.5em;
 		color: white;
-		letter-spacing: 3px;
+		letter-spacing: 1px;
 	}
 	a {
 		text-decoration: none;

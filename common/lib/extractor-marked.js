@@ -22,7 +22,6 @@ export function convertFrontMatter(string) {
 export function extractFrontMatter(markdown) {
 	const regex = /---\r?\n([\s\S]+?)\r?\n---/;
 	const match = regex.exec(markdown);
-	console.log(match);
 	if (!match) {
 		return {
 			content: markdown,
