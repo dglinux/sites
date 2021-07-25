@@ -1,5 +1,5 @@
 ---
-title: 分享会预告 | Web渗透测试_实战
+title: 分享会预告 | Web渗透测试以及实战
 author: dgtao
 category: event
 excerpt: 分享会预告：Web渗透测试以及实战
