@@ -8,23 +8,41 @@
 <script>
 	export let posts;
 	import ArticleInfo from '$lib/ArticleInfo.svelte';
+	import Icon from '@dglinux/sites-common/lib/Icon.svelte';
+	import { mdiRss } from '@mdi/js';
 </script>
 
 <svelte:head>
 	<title>博客 - 东莞理工学院 GNU/Linux 协会</title>
 </svelte:head>
-<div>
-	{#each posts as info (info.url)}
-		<article>
-			<ArticleInfo {info} />
-		</article>
-	{/each}
+<div class="container">
+	<a href="/blog/feed.xml">
+		<Icon icon={mdiRss} />
+		RSS
+	</a>
+	<div>
+		{#each posts as info (info.url)}
+			<article>
+				<ArticleInfo {info} />
+			</article>
+		{/each}
+	</div>
 </div>
 
 <style>
-	div {
+	.container {
 		max-width: 40em;
-		margin: 2.5em auto 4em auto;
+		margin: 2em auto 4em auto;
+		display: flex;
+		flex-direction: column;
+	}
+	a {
+		text-decoration: none;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		align-self: flex-end;
+		margin-bottom: 0.5em;
 	}
 	article {
 		margin-bottom: 3em;

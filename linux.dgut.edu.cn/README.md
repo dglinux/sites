@@ -15,4 +15,4 @@ $ yarn preview
 
 ## TODO
 
-* [ ] Add feed.xml.
+* [ ] Fix relative path.
