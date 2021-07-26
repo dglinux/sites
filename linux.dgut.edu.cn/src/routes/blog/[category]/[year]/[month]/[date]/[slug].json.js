@@ -5,7 +5,6 @@ import marked from 'marked';
 
 export async function get(request) {
 	const { category, year, month, date, slug } = request.params;
-	const url = `/blog/${category}/${year}/${month}/${date}/${slug}.md`;
 	const file = `blog/${year}-${month}-${date}-${slug}.md`;
 	let md;
 	try {

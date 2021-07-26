@@ -18,7 +18,7 @@ export function extractFrontMatter(markdown) {
 	if (!match) {
 		return {
 			content: markdown,
-			data: null
+			metadata: null
 		};
 	}
 	const content = markdown.slice(match[0].length);

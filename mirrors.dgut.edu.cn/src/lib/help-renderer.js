@@ -1,9 +1,5 @@
 import CommonRenderer from '@dglinux/sites-common/lib/common-renderer';
-import marked from 'marked';
-
-function removeTags(string) {
-	return string.replace(/<[^ ][^>]*>/g, '').replace(/<\/[^>]*>/g, '');
-}
+import { removeTags, isLinkRelativeMarkdown } from '@dglinux/sites-common/lib/utils';
 
 export default class HelpRenderer extends CommonRenderer {
 	store = {
@@ -17,7 +13,7 @@ export default class HelpRenderer extends CommonRenderer {
 
 	// Rewrite relative links to absolute links
 	link(href, title, text) {
-		if (href.endsWith('.md') && !href.startsWith('/') && !href.includes('://')) {
+		if (isLinkRelativeMarkdown(href)) {
 			href = href.replace(/\.md$/, '');
 			let absSeg = this.absoluteUrl.split('/');
 			let hrefSeg = href.split('/');

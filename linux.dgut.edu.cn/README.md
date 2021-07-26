@@ -15,4 +15,4 @@ $ yarn preview
 
 ## TODO
 
-* [ ] Fix relative path.
+* [ ] Write docs.
