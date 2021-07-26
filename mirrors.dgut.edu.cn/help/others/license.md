@@ -1,7 +1,3 @@
----
-description: 本作品采用知识共享 署名-非商业性使用-相同方式共享 4.0 国际 许可协议进行许可。
----
-
 # LICENSE
 
 ## Attribution-NonCommercial-ShareAlike 4.0 International
