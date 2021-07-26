@@ -1,7 +1,5 @@
-import { table } from '@dglinux/sites-common/lib/renderers';
-import marked from 'marked';
+import CommonRenderer from '@dglinux/sites-common/lib/common-renderer';
 
-const renderer = new marked.Renderer();
-renderer.table = table;
+const renderer = new CommonRenderer();
 
 export default renderer;

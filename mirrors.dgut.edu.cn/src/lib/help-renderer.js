@@ -1,23 +1,25 @@
-import { table, defaultRenderer } from '@dglinux/sites-common/lib/renderers';
+import CommonRenderer from '@dglinux/sites-common/lib/common-renderer';
 import marked from 'marked';
 
 function removeTags(string) {
 	return string.replace(/<[^ ][^>]*>/g, '').replace(/<\/[^>]*>/g, '');
 }
 
-export default function helpRenderer(absoluteUrl) {
-	const renderer = new marked.Renderer();
-	const store = {
+export default class HelpRenderer extends CommonRenderer {
+	store = {
 		title: null
 	};
 
-	renderer.table = table;
+	constructor(absoluteUrl, options) {
+		super(options);
+		this.absoluteUrl = absoluteUrl;
+	}
 
 	// Rewrite relative links to absolute links
-	renderer.link = (href, title, text) => {
+	link(href, title, text) {
 		if (href.endsWith('.md') && !href.startsWith('/') && !href.includes('://')) {
 			href = href.replace(/\.md$/, '');
-			let absSeg = absoluteUrl.split('/');
+			let absSeg = this.absoluteUrl.split('/');
 			let hrefSeg = href.split('/');
 			absSeg.pop();
 			const length = hrefSeg.length;
@@ -36,17 +38,15 @@ export default function helpRenderer(absoluteUrl) {
 			}
 			href = absSeg.concat(hrefSeg).join('/');
 		}
-		return defaultRenderer.link(href, title, text);
-	};
+		return super.link(href, title, text);
+	}
 
 	// Extract the title
-	renderer.heading = (text, level, raw, slugger) => {
-		if (level == 1 && !store.title) {
-			store.title = removeTags(text);
+	heading(text, level, raw, slugger) {
+		if (level == 1 && !this.store.title) {
+			this.store.title = removeTags(text);
 		}
 		const slug = slugger.slug(raw);
 		return `<h${level} id="${slug}">${text}</h${level}>\n`;
-	};
-
-	return [renderer, store];
+	}
 }

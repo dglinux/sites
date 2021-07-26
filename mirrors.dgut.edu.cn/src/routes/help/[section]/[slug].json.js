@@ -1,5 +1,5 @@
 import fs from 'fs';
-import helpRenderer from '$lib/help-renderer';
+import HelpRenderer from '$lib/help-renderer';
 import marked from 'marked';
 
 export async function get(request) {
@@ -17,13 +17,13 @@ export async function get(request) {
 			status: 404
 		};
 	}
-	const [renderer, store] = helpRenderer(`/${url}`);
+	const renderer = new HelpRenderer(`/${url}`);
 	const html = marked(md, { renderer });
 	return {
 		status: 200,
 		body: {
 			html,
-			title: store.title
+			title: renderer.store.title
 		}
 	};
 }
