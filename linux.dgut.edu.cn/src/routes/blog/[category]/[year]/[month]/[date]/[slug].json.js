@@ -11,9 +11,12 @@ export async function get(request) {
 	} catch (err) {
 		return { status: 404 };
 	}
-	const body = extractorMarked(md, url);
+	const { html, metadata } = extractorMarked(md, url);
+	if (metadata.category !== category) {
+		return { status: 404 };
+	}
 	return {
 		status: 200,
-		body
+		body: { html, metadata }
 	};
 }

@@ -2,6 +2,9 @@
 	export async function load({ fetch, page }) {
 		const { category, year, month, date, slug } = page.params;
 		const res = await fetch(`/blog/${category}/${year}/${month}/${date}/${slug}.json`);
+		if (!res.ok) {
+			return { status: res.status };
+		}
 		return {
 			props: {
 				post: await res.json(),

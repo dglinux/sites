@@ -15,5 +15,4 @@ $ yarn preview
 
 ## TODO
 
-* [ ] Add 404 page.
 * [ ] Add feed.xml.
