@@ -12,3 +12,7 @@ $ yarn
 $ yarn build
 $ yarn preview
 ```
+
+## TODO
+
+* [ ] Add ISO info page.
