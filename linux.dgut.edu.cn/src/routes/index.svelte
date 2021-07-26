@@ -29,7 +29,7 @@
 		<Icon icon={mdiDiscPlayer} />
 		镜像站
 	</a>
-	<a href="https://git.dglinux.cn/">
+	<a href="https://git.dglinux.com/">
 		<Icon icon={mdiGit} />
 		Git 服务器
 	</a>

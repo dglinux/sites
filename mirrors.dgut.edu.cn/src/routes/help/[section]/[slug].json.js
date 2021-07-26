@@ -1,10 +1,11 @@
 import fs from 'fs';
-import extractorMarked from '@dglinux/sites-common/lib/extractor-marked';
+import helpRenderer from '$lib/help-renderer';
+import marked from 'marked';
 
 export async function get(request) {
 	const { section, slug } = request.params;
 	// Prevent injection
-	if (!(/[A-Za-z\-]+/.test(section))) {
+	if (!/[A-Za-z\-]+/.test(section)) {
 		return { status: 404 };
 	}
 	const url = `help/${section}/${slug}.md`;
@@ -16,12 +17,13 @@ export async function get(request) {
 			status: 404
 		};
 	}
-	const { html, metadata } = extractorMarked(md, `/${url}`);
+	const [renderer, store] = helpRenderer(`/${url}`);
+	const html = marked(md, { renderer });
 	return {
 		status: 200,
 		body: {
 			html,
-			title: metadata.title
+			title: store.title
 		}
 	};
 }

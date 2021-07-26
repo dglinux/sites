@@ -1,5 +1,7 @@
 import fs from 'fs';
-import extractorMarked from '@dglinux/sites-common/lib/extractor-marked';
+import { extractFrontMatter } from '$lib/front-matter';
+import renderer from '$lib/blog-renderer';
+import marked from 'marked';
 
 export async function get(request) {
 	const { category, year, month, date, slug } = request.params;
@@ -11,7 +13,8 @@ export async function get(request) {
 	} catch (err) {
 		return { status: 404 };
 	}
-	const { html, metadata } = extractorMarked(md, url);
+	const { metadata, content } = extractFrontMatter(md);
+	const html = marked(content, { renderer });
 	if (metadata.category !== category) {
 		return { status: 404 };
 	}
