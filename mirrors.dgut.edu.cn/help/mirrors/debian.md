@@ -19,9 +19,10 @@ sudo sed -i 's/deb.debian.org/mirrors.dgut.edu.cn/g' /etc/apt/sources.list
 sudo apt-get update
 ```
 
-{% hint style="warning" %}
+<div class="warning">
+
 如遇无法拉取 https 源的情况，请先使用 http 源先安装 `apt-transport-https` \(Debian Buster 及以上版本不需要\)。但Debian不靠https保证可信性。
-{% endhint %}
+</div>
 
 
 

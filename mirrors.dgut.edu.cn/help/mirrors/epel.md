@@ -1,11 +1,8 @@
----
-description: >-
-  EPEL (Extra Packages for Enterprise Linux) 是由 Fedora Special Interest Group
-  为企业 Linux 创建、维护和管理的一个高质量附加包集合，适用于但不仅限于 Red Hat Enterprise Linux (RHEL),
-  CentOS, Scientific Linux (SL), Oracle Linux (OL)
----
-
 # EPEL 源
+
+EPEL (Extra Packages for Enterprise Linux) 是由 Fedora Special Interest Group
+为企业 Linux 创建、维护和管理的一个高质量附加包集合，适用于但不仅限于 Red Hat Enterprise Linux (RHEL),
+CentOS, Scientific Linux (SL), Oracle Linux (OL)。
 
 ### 地址
 

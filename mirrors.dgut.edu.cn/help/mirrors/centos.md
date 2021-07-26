@@ -14,8 +14,10 @@ sudo cp /etc/yum.repos.d/CentOS-Base.repo /etc/yum.repos.d/CentOS-Base.repo.bak
 
 STEP 2: 根据版本号，用以下内容创建`CentOS-Base.repo`
 
-{% tabs %}
-{% tab title="CentOS 7" %}
+<ul>
+<li><details>
+<summary>CentOS 7</summary>
+
 ```text
 # CentOS-Base.repo
 #
@@ -62,9 +64,11 @@ enabled=0
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-7
 
 ```
-{% endtab %}
+</details></li>
 
-{% tab title="CentOS 6" %}
+<li><details>
+<summary>CentOS 6</summary>
+
 ```text
 # CentOS-Base.repo
 #
@@ -119,9 +123,11 @@ gpgcheck=1
 enabled=0
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-6
 ```
-{% endtab %}
+</details></li>
 
-{% tab title="CentOS 5" %}
+<li><details>
+<summary>CentOS 5</summary>
+
 ```text
 # CentOS-Base.repo
 #
@@ -184,14 +190,13 @@ gpgcheck=1
 enabled=0
 gpgkey=https://mirrors.dgut.edu.cn/centos/RPM-GPG-KEY-CentOS-5CentOS 5
 ```
-{% endtab %}
-{% endtabs %}
+</details></li>
+</ul>
 
 STEP 3:运行 `sudo yum makecache` 生成缓存
 
-{% hint style="info" %}
-我们建议同时添加[EPEL](epel.md)源.
-{% endhint %}
+<div class="info">
 
-{% page-ref page="epel.md" %}
+我们建议同时添加[EPEL](epel.md)源.
+</div>
 
