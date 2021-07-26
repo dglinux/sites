@@ -28,7 +28,6 @@
 	}
 	article {
 		margin-bottom: 3em;
-		page-break-inside: avoid;
 	}
 	article :global(h2) {
 		font-size: 1.5em;

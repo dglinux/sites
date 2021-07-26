@@ -15,6 +15,5 @@ $ yarn preview
 
 ## TODO
 
-* [ ] Add category page.
 * [ ] Add 404 page.
 * [ ] Add feed.xml.
