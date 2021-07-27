@@ -1,0 +1,20 @@
+{
+  "name": "sites",
+  "version": "0.0.1",
+  "repository": "https://github.com/dglinux/sites",
+  "private": true,
+  "workspaces": [
+    "mirrors.dgut.edu.cn",
+    "linux.dgut.edu.cn",
+    "common"
+  ],
+  "scripts": {
+    "lint": "prettier --check --plugin-search-dir=. .",
+    "format": "prettier --write --plugin-search-dir=. ."
+  },
+  "devDependencies": {
+    "prettier": "~2.2.1",
+    "prettier-plugin-svelte": "^2.2.0",
+    "svelte": "^3.34.0"
+  }
+}

@@ -5,10 +5,9 @@ Under development.
 ## Preview
 
 ```console
-$ cd ../common
+$ cd ..
 $ yarn
 $ cd -
-$ yarn
 $ yarn build
 $ yarn preview
 ```

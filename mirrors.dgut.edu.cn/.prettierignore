@@ -1,6 +1,0 @@
-.svelte-kit/**
-public/**
-build/**
-node_modules/**
-package.json
-help/**
