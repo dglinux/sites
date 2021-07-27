@@ -15,6 +15,14 @@
     estree-walker "^2.0.1"
     picomatch "^2.2.2"
 
+"@sveltejs/adapter-node@next":
+  version "1.0.0-next.35"
+  resolved "https://registry.yarnpkg.com/@sveltejs/adapter-node/-/adapter-node-1.0.0-next.35.tgz#de1ad3deb2c5cf0be0a4807e2bfead3211ae3d05"
+  integrity sha512-IUn1WTyA5DlUBj6oHkk25v42JFwLq9g0fvqmujYFavJLoJ38WBAvHOOiirI5w0y1E7lXUn3HFlEjCfc3JsScPg==
+  dependencies:
+    esbuild "^0.12.5"
+    tiny-glob "^0.2.9"
+
 "@sveltejs/kit@next":
   version "1.0.0-next.137"
   resolved "https://registry.yarnpkg.com/@sveltejs/kit/-/kit-1.0.0-next.137.tgz#66a1e956615fb227552a49ed9f8fba44ee8b90e2"
@@ -54,7 +62,7 @@ debug@^4.3.2:
   dependencies:
     ms "2.1.2"
 
-esbuild@^0.12.8:
+esbuild@^0.12.5, esbuild@^0.12.8:
   version "0.12.16"
   resolved "https://registry.yarnpkg.com/esbuild/-/esbuild-0.12.16.tgz#c397144ce13b445a6ead9c1f747da11f79ec5e67"
   integrity sha512-XqI9cXP2bmQ6MREIqrYBb13KfYFSERsV1+e5jSVWps8dNlLZK+hln7d0mznzDIpfISsg/AgQW0DW3kSInXWhrg==
@@ -73,6 +81,16 @@ function-bind@^1.1.1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/function-bind/-/function-bind-1.1.1.tgz#a56899d3ea3c9bab874bb9773b7c5ede92f4895d"
   integrity sha512-yIovAzMX49sF8Yl58fSCWJ5svSLuaibPxXQJFLmBObTuCr0Mf1KiPopGM9NiFjiYBCbfaa2Fh6breQ6ANVTI0A==
+
+globalyzer@0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/globalyzer/-/globalyzer-0.1.0.tgz#cb76da79555669a1519d5a8edf093afaa0bf1465"
+  integrity sha512-40oNTM9UfG6aBmuKxk/giHn5nQ8RVz/SS4Ir6zgzOv9/qC3kKZ9v4etGTcJbEl/NyVQH7FGU7d+X1egr57Md2Q==
+
+globrex@^0.1.2:
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/globrex/-/globrex-0.1.2.tgz#dd5d9ec826232730cd6793a5e33a9302985e6098"
+  integrity sha512-uHJgbwAMwNFf5mLst7IWLNg14x1CkeqglJb/K3doi4dw6q2IvAAmM/Y81kevy83wP+Sst+nutFTYOGg3d1lsxg==
 
 has@^1.0.3:
   version "1.0.3"
@@ -220,6 +238,14 @@ svelte@^3.34.0:
   version "3.40.3"
   resolved "https://registry.yarnpkg.com/svelte/-/svelte-3.40.3.tgz#f7ac3a159f3e4a5a55c6a710e69c0313ef33b414"
   integrity sha512-aSZcouFacOKL/lOTzOOtDJcMbgkjaRvRptWJb0XcyFg2qYvO3IwcYeqtW5BuCJzYciiXKmNsqrp1CzsPt09xbA==
+
+tiny-glob@^0.2.9:
+  version "0.2.9"
+  resolved "https://registry.yarnpkg.com/tiny-glob/-/tiny-glob-0.2.9.tgz#2212d441ac17928033b110f8b3640683129d31e2"
+  integrity sha512-g/55ssRPUjShh+xkfx9UPDXqhckHEsHr4Vd9zX55oSdGZc/MD0m3sferOkwWtp98bv+kcVfEHtRJgBVJzelrzg==
+  dependencies:
+    globalyzer "0.1.0"
+    globrex "^0.1.2"
 
 vite@^2.4.3:
   version "2.4.4"

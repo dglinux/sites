@@ -2,6 +2,7 @@
   "name": "sites",
   "version": "0.0.1",
   "repository": "https://github.com/dglinux/sites",
+  "license": "LGPL-3.0",
   "private": true,
   "workspaces": [
     "mirrors.dgut.edu.cn",

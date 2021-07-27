@@ -1,0 +1,6 @@
+**/.DS_Store
+**/.git
+**/build
+**/.svelte-kit
+**/node_modules
+**/yarn-error.log

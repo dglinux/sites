@@ -1,0 +1,27 @@
+FROM node:12-alpine AS builder
+
+ENV TZ="Asia/Shanghai"
+
+WORKDIR /srcdir
+COPY . .
+
+RUN yarn && \
+    cd linux.dgut.edu.cn && \
+    yarn build && \
+    yarn cache clean && \
+    mv build/index.js build/index.mjs && \
+    cp -r blog/ build/
+
+
+FROM alpine:3.11
+
+ENV TZ="Asia/Shanghai"
+RUN apk add --no-cache nginx nodejs
+
+WORKDIR /srv
+COPY --from=builder /srcdir/linux.dgut.edu.cn/build/. .
+COPY linux.dgut.edu.cn/nginx.conf /etc/nginx/conf.d/default.conf
+
+RUN ln -sf /dev/stderr /var/log/nginx/error.log
+
+ENTRYPOINT ["node", "index.mjs"]
