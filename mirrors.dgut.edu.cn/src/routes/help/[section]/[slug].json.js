@@ -1,5 +1,6 @@
 import fs from 'fs';
 import HelpRenderer from '$lib/help-renderer';
+import { highlight } from '@dglinux/sites-common/lib/common-renderer';
 import marked from 'marked';
 
 export async function get(request) {
@@ -18,7 +19,7 @@ export async function get(request) {
 		};
 	}
 	const renderer = new HelpRenderer(`/${url}`);
-	const html = marked(md, { renderer });
+	const html = marked(md, { renderer, highlight });
 	return {
 		status: 200,
 		body: {

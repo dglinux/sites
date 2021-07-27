@@ -1,8 +1,8 @@
 <article>
 	<slot />
 </article>
-<!-- <svg viewBox="0 0 24 24" style="fill:#fff;fill-opacity:.25"><path d=""/></svg> -->
 
+<!-- <svg viewBox="0 0 24 24" style="fill:#fff;fill-opacity:.25"><path d=""/></svg> -->
 <style>
 	article {
 		--border-color: #6d6d6d;
@@ -170,6 +170,16 @@
 		}
 	}
 
+	article :global(details) {
+		cursor: pointer;
+	}
+
+	/* Code */
+	article :global(code),
+	article :global(code *) {
+		font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+	}
+	/* Inline code */
 	article :global(:not(pre) > code) {
 		padding: 1px 6px;
 		border: solid #999 1px;
@@ -178,38 +188,29 @@
 		color: #f2f2f2;
 		word-wrap: break-word;
 	}
-
 	@media (prefers-color-scheme: light) {
 		article :global(:not(pre) > code) {
 			background-color: #f0f0f0;
 			color: black;
 		}
 	}
-
 	article :global(a > code) {
 		color: rgb(82, 165, 14);
 		text-decoration: underline dotted rgb(82, 165, 14) 2px;
 	}
-
+	/* Code blocks */
 	article :global(pre) {
 		padding: 1rem;
 		border-radius: 0.3em;
-		background: #272822;
+		background: #2b2b2b;
 		overflow: auto;
 	}
-	article :global(code) {
-		font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
-	}
-
 	article :global(pre),
 	article :global(pre > code) {
 		color: #f8f8f2;
 	}
 
-	article :global(details) {
-		cursor: pointer;
-	}
-
+	/* Hint bars */
 	article :global(div.info),
 	article :global(div.warning),
 	article :global(div.error) {
@@ -244,5 +245,82 @@
 	article :global(div.error) {
 		background-color: #b71c1c;
 		background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' style='fill:%23fff;fill-opacity:.25'%3E%3Cpath d='M13 13H11V7H13M11 15H13V17H11M15.73 3H8.27L3 8.27V15.73L8.27 21H15.73L21 15.73V8.27L15.73 3Z'/%3E%3C/svg%3E");
+	}
+
+	/* Code highlighting (from a11y-dark) */
+	/* Comment */
+	article :global(.hljs-comment),
+	article :global(.hljs-quote) {
+		color: #d4d0ab;
+	}
+	/* Red */
+	article :global(.hljs-variable),
+	article :global(.hljs-template-variable),
+	article :global(.hljs-tag),
+	article :global(.hljs-name),
+	article :global(.hljs-selector-id),
+	article :global(.hljs-selector-class),
+	article :global(.hljs-regexp),
+	article :global(.hljs-deletion) {
+		color: #ffa07a;
+	}
+	/* Orange */
+	article :global(.hljs-number),
+	article :global(.hljs-built_in),
+	article :global(.hljs-literal),
+	article :global(.hljs-type),
+	article :global(.hljs-params),
+	article :global(.hljs-meta),
+	article :global(.hljs-link) {
+		color: #f5ab35;
+	}
+	/* Yellow */
+	article :global(.hljs-attribute) {
+		color: #ffd700;
+	}
+	/* Green */
+	article :global(.hljs-string),
+	article :global(.hljs-symbol),
+	article :global(.hljs-bullet),
+	article :global(.hljs-addition) {
+		color: #abe338;
+	}
+	/* Blue */
+	article :global(.hljs-title),
+	article :global(.hljs-section) {
+		color: #00e0e0;
+	}
+	/* Purple */
+	article :global(.hljs-keyword),
+	article :global(.hljs-selector-tag) {
+		color: #dcc6e0;
+	}
+	article :global(.hljs-emphasis) {
+		font-style: italic;
+	}
+	article :global(.hljs-strong) {
+		font-weight: bold;
+	}
+	@media screen and (-ms-high-contrast: active) {
+		article :global(.hljs-addition),
+		article :global(.hljs-attribute),
+		article :global(.hljs-built_in),
+		article :global(.hljs-bullet),
+		article :global(.hljs-comment),
+		article :global(.hljs-link),
+		article :global(.hljs-literal),
+		article :global(.hljs-meta),
+		article :global(.hljs-number),
+		article :global(.hljs-params),
+		article :global(.hljs-string),
+		article :global(.hljs-symbol),
+		article :global(.hljs-type),
+		article :global(.hljs-quote) {
+			color: highlight;
+		}
+		article :global(.hljs-keyword),
+		article :global(.hljs-selector-tag) {
+			font-weight: bold;
+		}
 	}
 </style>

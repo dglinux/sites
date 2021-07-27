@@ -9,7 +9,7 @@ Upcoming front-end monorepo for Dongguan University of Technology GNU/Linux Asso
 
 ## TODO
 
-* [ ] Add code highlighting
+* [ ] Add members page for linux.dgut.edu.cn
 * [ ] Add ISO info page for mirrors.dgut.edu.cn.
 
 ## License

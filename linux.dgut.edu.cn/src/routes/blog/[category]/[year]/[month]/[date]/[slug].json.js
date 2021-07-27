@@ -1,6 +1,7 @@
 import fs from 'fs';
 import { extractFrontMatter } from '$lib/front-matter';
 import renderer from '$lib/blog-renderer';
+import { highlight } from '@dglinux/sites-common/lib/common-renderer';
 import marked from 'marked';
 
 export async function get(request) {
@@ -13,7 +14,7 @@ export async function get(request) {
 		return { status: 404 };
 	}
 	const { metadata, content } = extractFrontMatter(md);
-	const html = marked(content, { renderer });
+	const html = marked(content, { renderer, highlight });
 	if (metadata.category !== category) {
 		return { status: 404 };
 	}
