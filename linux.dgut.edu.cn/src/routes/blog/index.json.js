@@ -1,4 +1,4 @@
-import getPosts from "./_posts";
+import getPosts from './_posts';
 
 export async function get(request) {
 	const posts = await getPosts();

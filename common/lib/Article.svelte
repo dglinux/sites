@@ -1,6 +1,7 @@
 <article>
 	<slot />
 </article>
+<!-- <svg viewBox="0 0 24 24" style="fill:#fff;fill-opacity:.25"><path d=""/></svg> -->
 
 <style>
 	article {
@@ -197,7 +198,7 @@
 		overflow: auto;
 	}
 	article :global(code) {
-		font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+		font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
 	}
 
 	article :global(pre),
@@ -245,4 +246,3 @@
 		background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' style='fill:%23fff;fill-opacity:.25'%3E%3Cpath d='M13 13H11V7H13M11 15H13V17H11M15.73 3H8.27L3 8.27V15.73L8.27 21H15.73L21 15.73V8.27L15.73 3Z'/%3E%3C/svg%3E");
 	}
 </style>
-<!-- <svg viewBox="0 0 24 24" style="fill:#fff;fill-opacity:.25"><path d=""/></svg> -->

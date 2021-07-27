@@ -20,17 +20,17 @@
 <pre>{error.message}</pre>
 
 {#if dev}
-    {#if error.frame}
-        <pre>{error.frame}</pre>
-    {/if}
-    {#if error.stack}
-        <pre>{error.stack}</pre>
-    {/if}
+	{#if error.frame}
+		<pre>{error.frame}</pre>
+	{/if}
+	{#if error.stack}
+		<pre>{error.stack}</pre>
+	{/if}
 {/if}
 
 <style>
-    pre {
-        margin: 1em auto;
-        overflow-x: auto;
-    }
+	pre {
+		margin: 1em auto;
+		overflow-x: auto;
+	}
 </style>

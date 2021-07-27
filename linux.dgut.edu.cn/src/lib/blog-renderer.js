@@ -20,7 +20,7 @@ export class BlogRenderer extends CommonRenderer {
 		this.absoluteUrl = absoluteUrl;
 	}
 
-    // Solve relative links
+	// Solve relative links
 	link(href, title, text) {
 		// Relative pages
 		// e.g. 2020-10-30-join-2020.md -> /blog/news/2020/10/30/join-2020.md;
@@ -32,7 +32,7 @@ export class BlogRenderer extends CommonRenderer {
 			if (splitted.length >= 4) {
 				const [year, month, date, ...words] = splitted;
 				const slug = words.join('-');
-                // To get the category, we need to read the referenced file
+				// To get the category, we need to read the referenced file
 				const file = fs.readFileSync(`blog/${year}-${month}-${date}-${slug}.md`, 'utf-8');
 				const { category } = extractFrontMatter(file).metadata;
 				href = `/blog/${category}/${year}/${month}/${date}/${slug}`;
