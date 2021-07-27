@@ -1,4 +1,6 @@
-# 贡献指南
+# 内容编辑指南
+
+本页是给网站内容编辑者的指南，包括但不限于 mirrors.dgut.edu.cn 的帮助页面和 linux.dgut.edu.cn 的博客。
 
 ## mirrors.dgut.edu.cn
 
