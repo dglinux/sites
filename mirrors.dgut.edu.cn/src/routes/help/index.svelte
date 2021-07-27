@@ -23,6 +23,8 @@
 		本镜像站依托于东莞理工学院，是教育网华南地区唯二的公网开源镜像站，欢迎大家的使用。也欢迎大家<a
 			href="https://github.com/dglinux/sites/tree/master/mirrors.dgut.edu.cn/help/"
 			>为本帮助文档作出贡献</a
+		>。如果发现帮助页面存在问题，请在<a href="https://github.com/dglinux/sites/issues/new"
+			>这里反馈</a
 		>。
 	</p>
 	<div class="info">
