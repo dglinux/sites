@@ -107,7 +107,13 @@ excerpt: <对文章的简短描述>
 
 ### 静态文件
 
-静态文件放在 `pulic/assets` 下，在文章中引用时就是 `/assets/` 下。这个后面还可能会改。
+静态文件（如图片）应当放在 `public/assets` 下。在文章中引用静态文件时应当使用文件系统内的相对路径，也就是就是 `../public/assets/` 下。比如在 `blog/2019-11-24-git.md` 中引用 `public/assets/git-1/download.png` 就应该这么写：
+
+```markdown
+![下载页面](../public/assets/git-1/download.png)
+```
+
+网页上会自动转化为绝对链接 `/assets/git-1/download.png`。这样设计是为了无论在网页上、GitHub 仓库里，还是克隆下来的 Git 仓库中打开 Markdown 文件都能正确地看到图片。
 
 ### 自定义元素
 

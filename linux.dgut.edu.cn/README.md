@@ -12,7 +12,3 @@ $ yarn
 $ yarn build
 $ yarn preview
 ```
-
-## TODO
-
-* [ ] Write docs.
