@@ -1,6 +1,6 @@
 # linux.dgut.edu.cn
 
-Under development.
+Website of Dongguan University of Technology GNU/Linux Association.
 
 ## Preview
 
