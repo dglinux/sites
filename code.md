@@ -68,4 +68,4 @@ yarn build
 yarn preview
 ```
 
-关于部署，请见[部署指南](deplot.md)。
+关于部署，请见[部署指南](deploy.md)。
