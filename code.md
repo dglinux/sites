@@ -62,8 +62,10 @@ yarn format
 yarn build
 ```
 
-会在 `.svelte-kit` 下生成生产环境服务器的 Node.js 代码。如果只是本地预览一下生产环境，可以运行
+会在 `build/` 路径下生成生产环境服务器的 Node.js 代码。如果只是本地预览一下生产环境，可以运行
 
 ```shell
 yarn preview
 ```
+
+关于部署，请见[部署指南](deplot.md)。

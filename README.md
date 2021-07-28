@@ -6,6 +6,7 @@ Upcoming front-end monorepo for Dongguan University of Technology GNU/Linux Asso
 
 * [内容编辑指南](content.md)
 * [代码维护指南](code.md)
+* [部署指南](deploy.md)
 
 ## TODO
 

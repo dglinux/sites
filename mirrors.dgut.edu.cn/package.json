@@ -1,6 +1,7 @@
 {
   "name": "@dglinux/mirrors.dgut.edu.cn",
   "version": "0.0.1",
+  "license": "LGPL-3.0",
   "scripts": {
     "dev": "svelte-kit dev",
     "build": "svelte-kit build",

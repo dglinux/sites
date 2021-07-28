@@ -7,10 +7,10 @@ WORKDIR /srcdir
 COPY . .
 
 RUN yarn && \
-    cd linux.dgut.edu.cn && \
+    cd mirrors.dgut.edu.cn && \
     yarn build && \
     yarn cache clean && \
-    cp -r blog/ build/
+    cp -r help/ build/
 
 
 FROM alpine:3.11
@@ -19,6 +19,6 @@ ENV TZ="Asia/Shanghai"
 RUN apk add --no-cache nodejs
 
 WORKDIR /srv
-COPY --from=builder /srcdir/linux.dgut.edu.cn/build/. .
+COPY --from=builder /srcdir/mirrors.dgut.edu.cn/build/. .
 
 CMD ["node", "index.mjs"]

@@ -9,11 +9,14 @@ const config = {
 			esbuild(defaultOptions) {
 				return {
 					...defaultOptions,
+					// Use .mjs suffix and Node and invoke it directly
+					outfile: 'build/index.mjs',
 					// Let's bundle all our production depencencies
 					external: ['fsevent']
 				};
 			}
 		}),
+		// Where compiled JS and CSS are stored
 		appDir: 'assets/app',
 		files: {
 			// fs: public/ -> web: /
