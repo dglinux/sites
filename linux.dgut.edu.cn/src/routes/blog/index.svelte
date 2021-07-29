@@ -16,7 +16,7 @@
 	<title>博客 - 东莞理工学院 GNU/Linux 协会</title>
 </svelte:head>
 <div class="container">
-	<a href="/blog/feed.xml">
+	<a rel="external" href="/blog/feed.xml">
 		<Icon icon={mdiRss} />
 		RSS
 	</a>

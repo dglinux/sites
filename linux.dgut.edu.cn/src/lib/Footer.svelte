@@ -11,8 +11,9 @@
 			<li>GitHub <a href="https://github.com/dglinux">@dglinux</a></li>
 		</ul>
 		<p>
-			招新于每学年的第一学期进行，请留意学生社团发展中心的通知。也可<a href="/blog/feed.xml"
-				>订阅本站的 Feed</a
+			纳新于每学年的第一学期进行，请留意学生社团发展中心的通知。也可<a
+				rel="external"
+				href="/blog/feed.xml">订阅本站的 Feed</a
 			>。
 		</p>
 	</div>
