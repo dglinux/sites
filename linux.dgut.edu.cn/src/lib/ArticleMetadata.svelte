@@ -10,7 +10,7 @@
 </script>
 
 <a sveltekit:prefetch href={`/blog/${category}`}>{category}</a>
-<span>By {author}</span>
+<a sveltekit:prefetch href={`/people/${author}`}>By {author}</a>
 <span>{dateFormatted}</span>
 
 <style>

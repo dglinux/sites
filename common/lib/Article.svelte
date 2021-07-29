@@ -4,14 +4,6 @@
 
 <!-- <svg viewBox="0 0 24 24" style="fill:#fff;fill-opacity:.25"><path d=""/></svg> -->
 <style>
-	article {
-		--border-color: #6d6d6d;
-	}
-	@media (prefers-color-scheme: light) {
-		article {
-			--border-color: #eaecef;
-		}
-	}
 	article :global(ul),
 	article :global(ol) {
 		padding-left: 40px;

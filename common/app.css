@@ -8,12 +8,14 @@ body {
 	border-top: 5px solid rgb(82, 165, 14);
 	background: #121212;
 	color: #cccccc;
+	--border-color: #6d6d6d;
 }
 
 @media (prefers-color-scheme: light) {
 	body {
 		background: #ffffff;
 		color: #333333;
+		--border-color: #eaecef;
 	}
 }
 
