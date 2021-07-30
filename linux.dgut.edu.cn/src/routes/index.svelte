@@ -25,27 +25,27 @@
 	<title>东莞理工学院 GNU/Linux 协会</title>
 </svelte:head>
 <div class="list">
-	<a href="https://mirrors.dgut.edu.cn/">
+	<a rel="external" href="https://mirrors.dgut.edu.cn/">
 		<Icon icon={mdiDiscPlayer} />
 		镜像站
 	</a>
-	<a href="https://git.dglinux.com/">
+	<a rel="external" href="https://git.dglinux.com/">
 		<Icon icon={mdiGit} />
 		Git 服务器
 	</a>
-	<a href="https://linux.dgut.edu.cn/dns-query">
+	<a rel="external" href="https://linux.dgut.edu.cn/dns-query">
 		<Icon icon={mdiCheckNetwork} />
 		DoH
 	</a>
-	<a href="https://linux.dgut.edu.cn/live/">
+	<a rel="external" href="https://linux.dgut.edu.cn/live/">
 		<Icon icon={mdiPresentationPlay} />
 		协会直播
 	</a>
-	<a href="https://linux.dgut.edu.cn/vote/">
+	<a rel="external" href="https://linux.dgut.edu.cn/vote/">
 		<Icon icon={mdiVote} />
 		投票
 	</a>
-	<a href="https://linux.dgut.edu.cn/grafana/">
+	<a rel="external" href="https://linux.dgut.edu.cn/grafana/">
 		<Icon icon={mdiChartAreaspline} />
 		流量监控
 	</a>
