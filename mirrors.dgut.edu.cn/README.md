@@ -1,6 +1,6 @@
 # mirrors.dgut.edu.cn
 
-Next generation DGUT Open Source Software Mirrors front-end.
+Front-end for DGUT Open Source Software Mirrors.
 
 ## Preview
 

@@ -1,6 +1,9 @@
 # dglinux/sites
 
-Upcoming front-end monorepo for Dongguan University of Technology GNU/Linux Association sites.
+Front-end monorepo for Dongguan University of Technology GNU/Linux Association sites, including:
+
+* [linux.dgut.edu.cn](https://linux.dgut.edu.cn)
+* [mirrors.dgut.edu.cn](https://mirrors.dgut.edu.cn)
 
 ## Documents
 
