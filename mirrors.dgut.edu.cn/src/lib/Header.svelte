@@ -11,7 +11,7 @@
 	<nav>
 		<ul>
 			<li><a href="https://linux.dgut.edu.cn/">Home</a></li>
-			<li><a href="https://linux.dgut.edu.cn/blog.html">Blog</a></li>
+			<li><a href="https://linux.dgut.edu.cn/blog">Blog</a></li>
 			<li><a href="https://t.me/dgutlinux/">Channel</a></li>
 			<li class:active={section == 'help'}>
 				<a href="/help">Wiki</a>
