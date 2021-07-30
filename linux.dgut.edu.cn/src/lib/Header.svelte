@@ -10,7 +10,7 @@
 	</a>
 	<nav>
 		<ul>
-			<li class:active={section === ''}>
+			<li class:active={section !== 'blog'}>
 				<a href="/">Home</a>
 			</li>
 			<li class:active={section === 'blog'}>

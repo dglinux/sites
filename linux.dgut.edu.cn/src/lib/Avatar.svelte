@@ -44,9 +44,9 @@
 		font-weight: 400;
 		user-select: none;
 	}
-	@media (prefer-color-scheme: light) {
+	@media (prefers-color-scheme: light) {
 		.initial {
-			background-color: #fefefe;
+			background-color: #efefef;
 		}
 	}
 </style>

@@ -32,6 +32,9 @@
 			Copyleft &copy; 2005-2021 Dongguan University of Technology GNU/Linux Association
 			<a href="https://linux.dgut.edu.cn/">(Dglinux)</a>
 		</p>
+		<p>
+			<a href="/people">People behind DGLinux</a>
+		</p>
 	</div>
 </footer>
 
