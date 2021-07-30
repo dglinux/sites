@@ -216,7 +216,7 @@
 	article :global(div.error) {
 		margin-bottom: 1em;
 		color: #fff;
-		padding: 1em 2em 0.01px 5em;
+		padding: 1em 2em 1px 5em;
 		border-radius: 4px;
 		background-repeat: no-repeat;
 		background-size: 80px 80px;
