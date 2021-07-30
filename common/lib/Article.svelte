@@ -231,6 +231,7 @@
 	article :global(div.info :not(pre) > code),
 	article :global(div.warning :not(pre) > code),
 	article :global(div.error :not(pre) > code) {
+		color: #fff;
 		background-color: transparent;
 		border: 0;
 	}
