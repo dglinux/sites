@@ -1,4 +1,4 @@
-FROM node:12-alpine AS builder
+FROM node:12.22-alpine AS builder
 
 EXPOSE 3000/tcp
 ENV TZ="Asia/Shanghai"
@@ -13,7 +13,7 @@ RUN yarn && \
     cp -r blog/ build/
 
 
-FROM alpine:3.11
+FROM alpine:3.12
 
 ENV TZ="Asia/Shanghai"
 RUN apk add --no-cache nodejs
