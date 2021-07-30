@@ -6,6 +6,9 @@ export default class CommonRenderer extends marked.Renderer {
 	table(header, body) {
 		return '<div class="table-container">' + super.table(header, body) + '</div>';
 	}
+	link(href, title, text) {
+		return super.link(href, title, text).replace(/^<a/, '<a rel="external"');
+	}
 }
 
 export function highlight(code, lang) {
