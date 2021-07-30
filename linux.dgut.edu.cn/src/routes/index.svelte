@@ -12,7 +12,6 @@
 	import {
 		mdiDiscPlayer,
 		mdiGit,
-		mdiCheckNetwork,
 		mdiPresentationPlay,
 		mdiVote,
 		mdiChartAreaspline,
@@ -32,10 +31,6 @@
 	<a rel="external" href="https://git.dglinux.com/">
 		<Icon icon={mdiGit} />
 		Git 服务器
-	</a>
-	<a rel="external" href="https://linux.dgut.edu.cn/dns-query">
-		<Icon icon={mdiCheckNetwork} />
-		DoH
 	</a>
 	<a rel="external" href="https://linux.dgut.edu.cn/live/">
 		<Icon icon={mdiPresentationPlay} />
