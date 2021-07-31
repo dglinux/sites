@@ -6,7 +6,7 @@ on:
 
 env:
   REGISTRY: ghcr.io
-  IMAGE_NAME: ${{ github.repository }}
+  IMAGE_OWNER: ${{ github.repository_owner }}
 
 jobs:
   build-and-push-image:
@@ -26,16 +26,32 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Extract metadata (tags, labels) for Docker
-        id: meta
+      - name: Extract metadata (tags, labels) for home
+        id: home
         uses: docker/metadata-action@98669ae865ea3cffbcbaa878cf57c20bbf1c6c38
         with:
-          images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
+          images: ${{ env.REGISTRY }}/${{ env.IMAGE_OWNER }}/linux.dgut.edu.cn
 
-      - name: Build and push Docker image
+      - name: Build and push home image
         uses: docker/build-push-action@ad44023a93711e3deb337508980b4b5e9bcdc5dc
         with:
           context: .
+          file: 'Dockerfile.home'
           push: true
-          tags: ${{ steps.meta.outputs.tags }}
-          labels: ${{ steps.meta.outputs.labels }}
+          tags: ${{ steps.home.outputs.tags }}
+          labels: ${{ steps.home.outputs.labels }}
+
+      - name: Extract metadata (tags, labels) for mirrors
+        id: mirrors
+        uses: docker/metadata-action@98669ae865ea3cffbcbaa878cf57c20bbf1c6c38
+        with:
+          images: ${{ env.REGISTRY }}/${{ env.IMAGE_OWNER }}/mirrors.dgut.edu.cn
+
+      - name: Build and push mirrors image
+        uses: docker/build-push-action@ad44023a93711e3deb337508980b4b5e9bcdc5dc
+        with:
+          context: .
+          file: 'Dockerfile.mirrors'
+          push: true
+          tags: ${{ steps.mirrors.outputs.tags }}
+          labels: ${{ steps.mirrors.outputs.labels }}
