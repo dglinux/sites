@@ -19,14 +19,14 @@ vim $PREFIX/etc/apt/sources.list
 
 ```diff
  # The main termux repository:
--deb https://termux.org/packages/ stable main
-+deb https://mirrors.dgut.edu.cn/termux/termux-packages-24 stable main
+-deb https://packages.termux.org/apt/termux-main/ stable main
++deb https://mirrors.dgut.edu.cn/termux/apt/termux-main/ stable main
 ```
 
 STEP 2: 更改 `$PREFIX/etc/apt/sources.list.d` 下其他仓库源
 
 ```bash
-sed -i 's|grimler.se|mirrors.dgut.edu.cn/termux|g' $PREFIX/etc/apt/sources.list.d/*.list
+sed -i 's|packages.termux.org|mirrors.dgut.edu.cn/termux|g' $PREFIX/etc/apt/sources.list.d/*.list
 ```
 
 STEP 3: 同步源索引
