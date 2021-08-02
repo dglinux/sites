@@ -9,6 +9,7 @@
 				<sup><a href="irc://irc.libera.chat/#dglinux">IRC://</a></sup>
 			</li>
 			<li>GitHub <a href="https://github.com/dglinux">@dglinux</a></li>
+			<li>微信公众号 <a rel="external" href="/assets/wechat-official.webp">莞工Linux</a></li>
 		</ul>
 		<p>
 			纳新于每学年的第一学期进行，请留意学生社团发展中心的通知。也可<a
