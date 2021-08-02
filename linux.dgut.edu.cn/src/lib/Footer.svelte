@@ -2,7 +2,7 @@
 	<div>
 		<h3>Join</h3>
 		<ul>
-			<li>Telegram <a href="https://t.me/dgutlug">@dgutlug</a></li>
+			<li>Telegram <a href="https://t.me/dgutlinux">@dgutlinux</a></li>
 			<li>QQ <a href="https://jq.qq.com/?_wv=1027&k=5Tw7Nao">261795035</a></li>
 			<li>
 				Libera.Chat <a href="https://web.libera.chat/?chan=#dglinux">#dglinux</a>
