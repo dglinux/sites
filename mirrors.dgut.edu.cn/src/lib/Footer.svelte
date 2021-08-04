@@ -2,12 +2,15 @@
 	<div>
 		<h3>Links</h3>
 		<p>
-			<a href="https://github.com/dglinux/issues/issues/new">
-				<b>镜像请求/反馈 New Mirror/Issues</b>
-			</a>
+			<a href="/download" class="download">软件/安装镜像下载</a>
 		</p>
 		<p>
 			<a href="https://help.mirrors.dglinux.com/"><b>使用帮助 Help</b></a>
+		</p>
+		<p>
+			<a href="https://github.com/dglinux/issues/issues/new">
+				<b>镜像请求/反馈 New Mirror/Issues</b>
+			</a>
 		</p>
 	</div>
 	<div>
@@ -58,5 +61,17 @@
 	p {
 		margin-top: 1em;
 		letter-spacing: 0.9px;
+	}
+	.download {
+		display: inline-block;
+		color: #fff;
+		text-decoration: none;
+		background: rgb(82, 165, 14);
+		border-radius: 0.2em;
+		padding: 0.5em 1rem;
+	}
+	.download:hover {
+		text-decoration: none;
+		background: rgb(99, 201, 16);
 	}
 </style>

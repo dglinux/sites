@@ -1,6 +1,8 @@
 <script>
 	export let isoinfo;
 	import DownloadFile from '$lib/DownloadFile.svelte';
+	import Icon from '@dglinux/sites-common/lib/Icon.svelte';
+	import { mdiFormatListBulleted } from '@mdi/js';
 	let selectedDistro;
 	let selectedVersion;
 	$: distroInfo = isoinfo.find((d) => d.name === selectedDistro);
@@ -49,11 +51,11 @@
 			</li>
 		</ol>
 	{/if}
-	{#if !selectedDistro}
-		<div class="hint">选择一个发行版</div>
-	{/if}
-	{#if selectedDistro && !selectedVersion}
-		<div class="hint">选择一个版本</div>
+	{#if !selectedDistro || !selectedVersion}
+		<div class="hint">
+			<Icon icon={mdiFormatListBulleted} />
+			{selectedDistro ? '选择一个版本' : '选择一个发行版'}
+		</div>
 	{/if}
 </div>
 
@@ -62,6 +64,7 @@
 		display: flex;
 		flex-direction: row;
 		column-gap: 1.5em;
+		margin-top: 1.5em;
 	}
 	ul,
 	ol {
@@ -105,10 +108,29 @@
 		background: #080808;
 		border: solid 1px;
 	}
+	.files {
+		width: 100%;
+	}
 	.files > li {
 		margin-left: 1em;
 	}
 	.hint {
 		margin: auto;
+		opacity: 0.7;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		column-gap: 0.3em;
+	}
+	@media (prefers-color-scheme: light) {
+		button:hover {
+			background: #efefef;
+		}
+		button:active {
+			background: #ddd;
+		}
+		.active {
+			background: #eee;
+		}
 	}
 </style>
