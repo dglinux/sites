@@ -5,7 +5,7 @@
 			<a href="/download" class="download">软件/安装镜像下载</a>
 		</p>
 		<p>
-			<a href="https://help.mirrors.dglinux.com/"><b>使用帮助 Help</b></a>
+			<a href="/help"><b>使用帮助 Help</b></a>
 		</p>
 		<p>
 			<a href="https://github.com/dglinux/issues/issues/new">
