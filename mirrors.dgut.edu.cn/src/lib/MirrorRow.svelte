@@ -23,6 +23,8 @@
 	</td>
 	<td class:success title={mirror.status}>
 		<SyncIcon status={mirror.status} />
+		<!-- For people who use w3m -->
+		<span style="display:none">{mirror.status}</span>
 	</td>
 	<td>{lastUpdate}</td>
 	<td class="pc">{nextSchedule}</td>
