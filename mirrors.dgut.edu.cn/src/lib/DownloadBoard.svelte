@@ -1,5 +1,6 @@
 <script>
 	export let isoinfo;
+	import DownloadFile from '$lib/DownloadFile.svelte';
 	let selectedDistro;
 	let selectedVersion;
 	$: distroInfo = isoinfo.find((d) => d.name === selectedDistro);
@@ -26,7 +27,7 @@
 		</ul>
 	{/if}
 	{#if versions}
-		<ul aria-label="版本">
+		<ol class="versions" aria-label="版本">
 			{#each versions as version}
 				<li>
 					<button
@@ -37,16 +38,22 @@
 					>
 				</li>
 			{/each}
-		</ul>
+		</ol>
 	{/if}
 	{#if files}
-		<ul class="files" aria-label="下载">
-			{#each files as file (file.url)}
-				<li>
-					<a rel="external" download href={file.url}>{file.base}</a>
-				</li>
-			{/each}
-		</ul>
+		<ol class="files" aria-label="下载">
+			<li>
+				{#each files as file (file.url)}
+					<DownloadFile {file} />
+				{/each}
+			</li>
+		</ol>
+	{/if}
+	{#if !selectedDistro}
+		<div class="hint">选择一个发行版</div>
+	{/if}
+	{#if selectedDistro && !selectedVersion}
+		<div class="hint">选择一个版本</div>
 	{/if}
 </div>
 
@@ -54,13 +61,15 @@
 	.container {
 		display: flex;
 		flex-direction: row;
+		column-gap: 1.5em;
 	}
-	ul {
+	ul,
+	ol {
 		list-style: none;
-		margin-right: 1.5em;
 		display: block;
 	}
-	ul::before {
+	ul::before,
+	ol::before {
 		content: attr(aria-label);
 		display: block;
 		font-size: 0.85em;
@@ -69,8 +78,9 @@
 		margin-bottom: 0.5em;
 		opacity: 0.7;
 	}
-	.distros {
-		width: 16%;
+	.distros,
+	.versions {
+		white-space: nowrap;
 	}
 	button {
 		display: block;
@@ -98,9 +108,7 @@
 	.files > li {
 		margin-left: 1em;
 	}
-	a {
-		font-size: 1.25rem;
-		line-height: 2rem;
-		font-weight: 500;
+	.hint {
+		margin: auto;
 	}
 </style>
