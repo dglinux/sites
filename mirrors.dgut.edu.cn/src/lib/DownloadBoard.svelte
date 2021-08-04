@@ -133,4 +133,10 @@
 			background: #eee;
 		}
 	}
+	@media (max-width: 767px) {
+		.container {
+			flex-direction: column;
+			row-gap: 2em;
+		}
+	}
 </style>
