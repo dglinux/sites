@@ -20,17 +20,18 @@
 		height: 5px;
 	}
 	.container {
+		box-sizing: border-box;
 		padding-right: 15px;
 		padding-left: 15px;
 		margin-right: auto;
 		margin-left: auto;
 	}
-	@media (min-width: 768px) {
+	@media (min-width: 780px) {
 		.container {
 			width: 750px;
 		}
 	}
-	@media (min-width: 992px) {
+	@media (min-width: 1000px) {
 		.container {
 			width: 970px;
 		}
