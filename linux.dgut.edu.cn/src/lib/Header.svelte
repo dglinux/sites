@@ -41,8 +41,8 @@
 		line-height: 1em;
 	}
 	img {
-		max-width: 1.5em;
-		max-height: 100%;
+		width: 1.5em;
+		height: 1.5em;
 	}
 	.title {
 		margin-left: 0.5em;
