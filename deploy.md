@@ -21,3 +21,7 @@ docker run --restart unless-stopped -p 3002:3000 -d mirrors.dgut.edu.cn
 Dockerfile 中没有打包 Nginx，因此这里的 `nginx.conf` 只是示例。如需容器化 Nginx 请使用 docker-compose。仓库没有包含 `robots.txt`，为了避免镜像站 serve 的文件被搜索引擎索引导致的资源浪费，部署时请注意添加该文件。
 
 旧的镜像站前端将静态文件放在 `/static/assets` 下，而将 tunasync 的 API 放在 `/static/status.json`，将 MirrorZ 的 API 放在 `/static/mirrorz.json`。因为有第三方的服务依赖这些 API，这边不方便更改，因此可以认为 `/static/` 下都来自后端。
+
+------
+
+Serve 镜像文件可以用 `autoindex/autoindex.xslt` 模板以获得更美观的索引。

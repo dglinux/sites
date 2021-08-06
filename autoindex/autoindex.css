@@ -5,6 +5,7 @@
 }
 
 body {
+	border-top: 5px solid rgb(82, 165, 14);
 	background: #121212;
 	color: #cccccc;
 }
@@ -26,9 +27,6 @@ a:hover {
 	text-decoration-color: rgb(106, 209, 21);
 }
 
-body {
-	border-top: 5px solid rgb(82, 165, 14);
-}
 .c {
 	box-sizing: border-box;
 	padding: 2em 15px;

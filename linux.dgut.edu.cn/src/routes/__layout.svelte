@@ -4,8 +4,7 @@
 	import Header from '$lib/Header.svelte';
 </script>
 
-<div class="stripe" />
-<div class="container">
+<div>
 	<Header />
 	<main>
 		<slot />
@@ -14,12 +13,7 @@
 </div>
 
 <style>
-	.stripe {
-		width: 100%;
-		background-color: rgb(82, 165, 14);
-		height: 5px;
-	}
-	.container {
+	div {
 		box-sizing: border-box;
 		padding-right: 15px;
 		padding-left: 15px;
@@ -27,17 +21,17 @@
 		margin-left: auto;
 	}
 	@media (min-width: 780px) {
-		.container {
+		div {
 			width: 750px;
 		}
 	}
 	@media (min-width: 1000px) {
-		.container {
+		div {
 			width: 970px;
 		}
 	}
 	@media (min-width: 1200px) {
-		.container {
+		div {
 			width: 1170px;
 		}
 	}
