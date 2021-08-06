@@ -1,0 +1,155 @@
+* {
+	margin: 0;
+	padding: 0;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+	background: #121212;
+	color: #cccccc;
+	display: block !important;
+}
+
+@media (prefers-color-scheme: light) {
+	body {
+		background: #ffffff;
+		color: #333333;
+	}
+}
+
+a {
+	color: rgb(82, 165, 14);
+	text-decoration: underline dotted rgb(82, 165, 14) 2px;
+}
+
+a:hover {
+	color: rgb(99, 201, 16);
+	text-decoration: underline dotted rgb(106, 209, 21) 2px;
+}
+
+.stripe {
+	width: 100%;
+	background-color: rgb(82, 165, 14);
+	height: 5px;
+}
+.container {
+	box-sizing: border-box;
+	padding-right: 15px;
+	padding-left: 15px;
+	margin-right: auto;
+	margin-left: auto;
+}
+@media (min-width: 780px) {
+	.container {
+		width: 750px;
+	}
+}
+@media (min-width: 1000px) {
+	.container {
+		width: 970px;
+	}
+}
+@media (min-width: 1200px) {
+	.container {
+		width: 1170px;
+	}
+}
+
+header {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	margin: 1.05em 0;
+}
+.titlebar,
+nav {
+	display: inline-flex;
+	flex-direction: row;
+	align-items: center;
+}
+.titlebar {
+	font-size: 1.5em;
+	line-height: 1em;
+}
+img {
+	width: 1.5em;
+	height: 100%;
+}
+.title {
+	margin-left: 0.5em;
+	color: white;
+	letter-spacing: 3px;
+}
+header a,
+header a:hover {
+	text-decoration: none;
+}
+ul {
+	display: inline-flex;
+	flex-direction: row;
+	column-gap: 1.5rem;
+	list-style: none;
+}
+nav a {
+	display: inline;
+	text-transform: uppercase;
+	color: #ddd;
+	font-weight: 700;
+	font-size: 12px;
+	line-height: 20px;
+	padding: 15px 0;
+}
+.active a {
+	border-bottom: 2px solid rgb(82, 165, 14);
+}
+nav a:hover {
+	color: rgb(82, 165, 14);
+}
+@media (max-width: 767px) {
+	header {
+		flex-direction: column;
+		align-items: center;
+		row-gap: 7.5px;
+	}
+	nav {
+		flex-wrap: wrap;
+	}
+	.title {
+		font-size: 18px;
+	}
+	nav a {
+		padding: 10px 0;
+	}
+}
+@media (prefers-color-scheme: light) {
+	.title {
+		color: black;
+	}
+	nav a {
+		color: #384452;
+	}
+}
+
+.table-container {
+	overflow-x: auto;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+	width: 100%;
+}
+td,
+th {
+	padding: 0.2em 0.2rem;
+	text-align: left;
+}
+h1,
+td,
+td a {
+	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+}
+h1 {
+	font-weight: 500;
+	font-size: 2em;
+	margin: 1em 0.2rem;
+}
