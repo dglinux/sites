@@ -1,5 +1,7 @@
 # Auto-index template for Nginx
 
+Dependency: `nginx-full` or `nginx-extra`. See [wiki](https://wiki.debian.org/Nginx) for details.
+
 ```nginx
 location / {
     autoindex on;
