@@ -17,13 +17,15 @@
 <script>
 	export let post;
 	export let date;
-	let { title, category, author } = post.metadata;
+	let { title, category, author, excerpt } = post.metadata;
 	import Article from '@dglinux/sites-common/lib/Article.svelte';
 	import ArticleMetadata from '$lib/ArticleMetadata.svelte';
 </script>
 
 <svelte:head>
 	<title>{title} - 博客 - 东莞理工学院 GNU/Linux 协会</title>
+	<meta name="author" content={author} />
+	<meta name="description" content={excerpt} />
 </svelte:head>
 <article>
 	<h1>{title}</h1>

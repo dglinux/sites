@@ -22,6 +22,10 @@
 
 <svelte:head>
 	<title>东莞理工学院 GNU/Linux 协会</title>
+	<meta
+		name="description"
+		content="东莞理工学院 GNU/Linux 协会（DGUT GNU/Linux Association, DGLinux），东莞理工学院 GNU/Linux 开源自由软件用户和爱好者组成的学生社团。"
+	/>
 </svelte:head>
 <div class="list">
 	<a rel="external" href="https://mirrors.dgut.edu.cn/">
