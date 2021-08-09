@@ -32,7 +32,7 @@
 		<Icon icon={mdiDiscPlayer} />
 		镜像站
 	</a>
-	<a rel="external" href="https://git.dglinux.com/">
+	<a rel="external" href="https://linux.dgut.edu.cn/git/">
 		<Icon icon={mdiGit} />
 		Git 服务器
 	</a>
