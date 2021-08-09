@@ -35,8 +35,6 @@
 		text-align: center;
 		padding: 0.5em 1em;
 		white-space: nowrap;
-	}
-	th {
 		letter-spacing: 1px;
 	}
 	thead > tr {
