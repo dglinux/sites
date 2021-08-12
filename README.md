@@ -14,7 +14,6 @@ Front-end monorepo for Dongguan University of Technology GNU/Linux Association s
 ## TODO
 
 * [ ] Add members page for linux.dgut.edu.cn
-* [ ] Add ISO info page for mirrors.dgut.edu.cn.
 
 ## License
 

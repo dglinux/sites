@@ -53,13 +53,9 @@
 		padding: 0.5em 1em;
 		white-space: nowrap;
 	}
-	.name > a {
+	.name > a:not(:hover) {
 		color: inherit;
 		text-decoration: none;
-	}
-	.name > a:hover {
-		color: #fff;
-		text-decoration: underline;
 	}
 	.success {
 		color: rgb(99, 201, 16);
@@ -67,9 +63,6 @@
 	@media (prefers-color-scheme: light) {
 		tr:hover {
 			background: #efefef;
-		}
-		.name > a:hover {
-			color: #000;
 		}
 	}
 </style>

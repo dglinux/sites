@@ -68,14 +68,13 @@
 		flex-wrap: wrap;
 	}
 	.list a {
-		color: inherit;
-		text-decoration: none;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
+		text-decoration: none;
 	}
-	.list a:hover {
-		color: rgb(99, 201, 16);
+	.list a:not(:hover) {
+		color: inherit;
 	}
 	.list a :global(svg) {
 		height: 6.5em;
