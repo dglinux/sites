@@ -2,16 +2,19 @@
 	<div>
 		<h3>Links</h3>
 		<p>
-			<a href="/download" class="download">软件/安装镜像下载</a>
+			<a href="/download" class="download">安装镜像下载</a>
 		</p>
-		<p>
-			<a href="/help"><b>使用帮助 Help</b></a>
-		</p>
-		<p>
-			<a href="https://github.com/dglinux/issues/issues/new">
-				<b>镜像请求/反馈 New Mirror/Issues</b>
-			</a>
-		</p>
+		<ul>
+			<li><a href="/help"><b>使用帮助 Help</b></a></li>
+			<li>
+				<a href="https://linux.dgut.edu.cn/grafana/d/T6hvx3Gnk/">镜像延迟监控 Monitor</a>
+			</li>
+			<li>
+				<a href="https://github.com/dglinux/issues/issues/new">
+					镜像请求/反馈 New Mirror/Issues
+				</a>
+			</li>
+		</ul>
 	</div>
 	<div>
 		<h3>Introduction</h3>
@@ -58,7 +61,8 @@
 	h3:hover::before {
 		color: rgb(99, 201, 16);
 	}
-	p {
+	p,
+	ul {
 		margin-top: 1em;
 		letter-spacing: 0.9px;
 	}
@@ -73,5 +77,8 @@
 	.download:hover {
 		text-decoration: none;
 		background: rgb(99, 201, 16);
+	}
+	li {
+		margin-left: 1em;
 	}
 </style>
