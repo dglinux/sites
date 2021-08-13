@@ -5,11 +5,11 @@
 </script>
 
 <svelte:head>
-	<title>People behind DGLinux - 东莞理工学院 GNU/Linux 协会</title>
+	<title>Planet - 东莞理工学院 GNU/Linux 协会</title>
 </svelte:head>
 <div class="container">
-	<h1>People behind DGLinux</h1>
-	<div class="all">
+	<h1>DGLinux Planet</h1>
+	<div class="people">
 		{#each entries as person (person[0])}
 			<Avatar id={person[0]} full={person[1].full} src={person[1].avatar} />
 		{/each}
@@ -26,7 +26,7 @@
 		max-width: 44em;
 		margin: 2.5em auto 4em auto;
 	}
-	.all {
+	.people {
 		display: flex;
 		flex-direction: row;
 		flex-wrap: wrap;

@@ -49,18 +49,4 @@ export default {
 	tenetur: {},
 	obcaecati: {},
 	perferendis: {},
-	numquam: {},
-	illo: {},
-	enim: {},
-	vero: {},
-	natus: {},
-	reprehenderit: {},
-	atque: {},
-	harum: {},
-	dolore: {},
-	suscipit: {},
-	exercitationem: {},
-	sapiente: {},
-	unde: {},
-	recusandae: {}
 };

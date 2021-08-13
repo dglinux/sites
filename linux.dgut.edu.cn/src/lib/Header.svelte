@@ -10,13 +10,15 @@
 	</a>
 	<nav>
 		<ul>
-			<li class:active={section !== 'blog'}>
+			<li class:active={section === ''}>
 				<a href="/">Home</a>
 			</li>
 			<li class:active={section === 'blog'}>
 				<a href="/blog">Blog</a>
 			</li>
-			<li><a href="https://t.me/dgutlinux/">Channel</a></li>
+			<li class:active={section === 'planet'}>
+				<a href="/planet">Planet</a>
+			</li>
 			<li><a href="https://mirrors.dgut.edu.cn/help">Wiki</a></li>
 			<li><a href="https://mirrors.dgut.edu.cn/">Mirrors</a></li>
 		</ul>
