@@ -10,7 +10,7 @@
 </script>
 
 <a sveltekit:prefetch href={`/blog/${category}`}>{category}</a>
-<a sveltekit:prefetch href={`/people/${author}`}>By {author}</a>
+<a sveltekit:prefetch href={`/planet/${author}`}>By {author}</a>
 <span>{dateFormatted}</span>
 
 <style>
@@ -18,7 +18,7 @@
 		text-transform: uppercase;
 		font-size: 0.8em;
 	}
-	span {
-		margin-left: 1em;
+	a {
+		margin-right: 1em;
 	}
 </style>

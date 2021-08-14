@@ -3,7 +3,7 @@ export default {
 		avatar: 'b360b1d85065b9b62501d0315bc58c33',
 		home: 'https://www.42yeah.me',
 		github: '42yeah',
-        desc: '2019-2020 届协会会长。投票系统、镜像站前端负责人。'
+        desc: '2019-2020 届协会会长。投票系统、镜像站前端原作者。'
 	},
 	lyekumchew: {
         full: 'AUTUMN',
@@ -29,8 +29,9 @@ export default {
 		full: 'Chuang Zhu',
 		avatar: '0c1549348b4acdb2c4f3b4d9ba09f870',
 		home: 'https://melty.land',
+		feed: 'https://melty.land/feed.xml',
 		github: 'chuangzhu',
-		mail: 'chuang at melty dot land',
+		mail: 'chuang at melty.land',
         desc: '2021-2022 届协会会长。镜像站负责人。'
 	},
     // Below are just place-holders

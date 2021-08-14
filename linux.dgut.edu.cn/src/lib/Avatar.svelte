@@ -3,10 +3,10 @@
 	export let id;
 	export let full;
 	const name = full || id;
-    const url = src && `https://www.gravatar.com/avatar/${src}`
+    const url = src && `https://cdn.libravatar.org/avatar/${src}`
 </script>
 
-<a sveltekit:prefetch href={`/people/${id}`} title={name}>
+<a sveltekit:prefetch href={`/planet/${id}`} title={name}>
 	{#if src}
 		<span role="img" style={`background-image: url(${url});`} />
 	{/if}

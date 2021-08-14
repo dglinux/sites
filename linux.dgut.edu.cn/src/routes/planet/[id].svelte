@@ -31,7 +31,6 @@
     {#if person.desc}
         <p>{person.desc}</p>
     {/if}
-    <p></p>
 	<div class="social">
 		{#if person.home}
 			<span>
@@ -68,7 +67,6 @@
 		display: flex;
 		flex-direction: row;
 		align-items: center;
-		margin-bottom: 0.8em;
 	}
 	h1 {
 		font-weight: 400;
@@ -76,7 +74,7 @@
 		margin-left: 0.5em;
 	}
     p {
-        margin-bottom: 0.8em;
+        margin: 1em 0;
     }
 	.social {
 		display: flex;
@@ -85,16 +83,19 @@
 		flex-wrap: wrap;
 	}
 	span {
-		font-size: 1.1em;
 		display: flex;
 		flex-direction: row;
 		align-items: center;
 		margin-right: 0.5em;
 		column-gap: 0.2em;
 	}
+	span :global(svg) {
+		height: 1.2em;
+	}
     article:first-child {
 		border-top: 1px solid var(--border-color);
-        margin-top: 1em;
+        margin-top: 2em;
+		padding-top: 2em;
     }
     article {
         padding: 1em 0;
