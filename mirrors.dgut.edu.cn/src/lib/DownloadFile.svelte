@@ -5,6 +5,7 @@
 </script>
 
 <a rel="external" download href={file.url}>{file.base}</a>
+<span>{file.size}</span>
 {#if hasChecksum}
 	<div>
 		{#if sha512}
@@ -28,7 +29,6 @@
 
 <style>
 	a {
-        display: block;
 		font-size: 1.25rem;
 		line-height: 2rem;
 		font-weight: 500;

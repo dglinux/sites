@@ -10,9 +10,7 @@
 				<a href="https://linux.dgut.edu.cn/grafana/d/T6hvx3Gnk/">镜像延迟监控 Monitor</a>
 			</li>
 			<li>
-				<a href="https://github.com/dglinux/issues/issues/new">
-					镜像请求/反馈 New Mirror/Issues
-				</a>
+				<a href="https://github.com/dglinux/issues/issues/new">镜像请求/反馈 New Mirror/Issues</a>
 			</li>
 		</ul>
 	</div>

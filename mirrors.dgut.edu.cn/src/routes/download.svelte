@@ -14,4 +14,4 @@
 	<title>软件下载 - DGUT Open Source Software Mirrors</title>
 </svelte:head>
 <noscript>You need to enable JavaScript to view this page.</noscript>
-<DownloadBoard {isoinfo}/>
+<DownloadBoard {isoinfo} />

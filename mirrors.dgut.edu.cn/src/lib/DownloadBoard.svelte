@@ -44,11 +44,11 @@
 	{/if}
 	{#if files}
 		<ol class="files" aria-label="下载">
-			<li>
-				{#each files as file (file.url)}
+			{#each files as file (file.url)}
+				<li>
 					<DownloadFile {file} />
-				{/each}
-			</li>
+				</li>
+			{/each}
 		</ol>
 	{/if}
 	{#if !selectedDistro || !selectedVersion}
