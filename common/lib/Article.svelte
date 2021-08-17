@@ -142,25 +142,22 @@
 		}
 	}
 
+	/* Table */
 	article :global(table) {
 		width: 100%;
 		border-collapse: collapse;
 	}
-
 	article :global(td),
 	article :global(th) {
 		border: var(--border-color) 1px solid;
 		padding: 6px 13px;
 	}
-
 	article :global(tr:nth-child(odd)) {
 		background: #222;
 	}
-
 	article :global(tr:nth-child(even)) {
 		background: #333;
 	}
-
 	@media (prefers-color-scheme: light) {
 		article :global(tr:nth-child(odd)) {
 			background: #fff;
@@ -170,8 +167,40 @@
 		}
 	}
 
-	article :global(details) {
+	/* Details */
+	article :global(summary) {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
 		cursor: pointer;
+		list-style-type: none;
+	}
+	article :global(summary:hover) {
+		color: rgb(99, 201, 16);
+	}
+	article :global(summary::-webkit-details-marker) {
+		display: none;
+	}
+	article :global(summary::after) {
+		content: '';
+		display: inline-block;
+		width: 1.2em;
+		height: 1.2em;
+		margin-left: 0.3em;
+		background-size: contain;
+		/* Chevron */
+		background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath style='fill:%23ccc' d='M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z' /%3E%3C/svg%3E");
+	}
+	article :global(details[open] summary::after) {
+		background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath style='fill:%23ccc' d='M7.41,15.41L12,10.83L16.59,15.41L18,14L12,8L6,14L7.41,15.41Z' /%3E%3C/svg%3E");
+	}
+	@media (prefers-color-scheme: light) {
+		article :global(summary::after) {
+			background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath style='fill:%23333' d='M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z' /%3E%3C/svg%3E");
+		}
+		article :global(details[open] summary::after) {
+			background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath style='fill:%23333' d='M7.41,15.41L12,10.83L16.59,15.41L18,14L12,8L6,14L7.41,15.41Z' /%3E%3C/svg%3E");
+		}
 	}
 
 	/* Code */
@@ -302,27 +331,5 @@
 	}
 	article :global(.hljs-strong) {
 		font-weight: bold;
-	}
-	@media screen and (-ms-high-contrast: active) {
-		article :global(.hljs-addition),
-		article :global(.hljs-attribute),
-		article :global(.hljs-built_in),
-		article :global(.hljs-bullet),
-		article :global(.hljs-comment),
-		article :global(.hljs-link),
-		article :global(.hljs-literal),
-		article :global(.hljs-meta),
-		article :global(.hljs-number),
-		article :global(.hljs-params),
-		article :global(.hljs-string),
-		article :global(.hljs-symbol),
-		article :global(.hljs-type),
-		article :global(.hljs-quote) {
-			color: highlight;
-		}
-		article :global(.hljs-keyword),
-		article :global(.hljs-selector-tag) {
-			font-weight: bold;
-		}
 	}
 </style>
