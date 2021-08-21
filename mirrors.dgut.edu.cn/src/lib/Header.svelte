@@ -5,7 +5,7 @@
 
 <header>
 	<a class="titlebar" href="/">
-		<img src="/assets/logo.png" alt="DGLinux Logo" />
+		<img height="36" width="36" src="/assets/logo.png" alt="DGLinux Logo" />
 		<span class="title">东莞理工学院 镜像站</span>
 	</a>
 	<nav>
@@ -39,10 +39,6 @@
 	.titlebar {
 		font-size: 1.5em;
 		line-height: 1em;
-	}
-	img {
-		width: 1.5em;
-		height: 1.5em;
 	}
 	.title {
 		margin-left: 0.5em;
