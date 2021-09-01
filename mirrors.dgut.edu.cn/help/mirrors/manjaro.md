@@ -14,7 +14,3 @@ Server = https://mirrors.dgut.edu.cn/manjaro/stable/$repo/$arch
 
 STEP 2: 更新软件包缓存： `sudo pacman -Syy`
 
-<div class="info">
-
-对于国内用户，您可以添加[ArchLinux CN](archlinuxcn.md)源以丰富在中国的使用体验.但可能有未定义的影响.
-</div>
