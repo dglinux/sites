@@ -1,1 +1,1 @@
-export default ['archlinux', 'archlinuxcn', 'kicad', 'ubuntu', 'ubuntu-releases', 'CTAN'];
+export default ['archlinux', 'archlinuxcn', 'centos', 'kicad', 'ubuntu', 'ubuntu-releases', 'CTAN'];
