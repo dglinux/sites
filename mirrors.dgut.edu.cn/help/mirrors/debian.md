@@ -4,6 +4,10 @@
 
 [https://mirrors.dgut.edu.cn/debian/](https://mirrors.dgut.edu.cn/debian/)
 
+### 收录架构
+
+`amd64`、`i386`、`arm64`、`armhf`
+
 ### 使用方法
 
 STEP 1: 备份`/etc/apt/sources.list`，您可以
@@ -23,6 +27,3 @@ sudo apt-get update
 
 如遇无法拉取 https 源的情况，请先使用 http 源先安装 `apt-transport-https` \(Debian Buster 及以上版本不需要\)。但Debian不靠https保证可信性。
 </div>
-
-
-

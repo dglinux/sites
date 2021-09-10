@@ -31,5 +31,5 @@ sudo apt-get update
 如遇无法拉取 https 源的情况，请先使用 http 源先安装 `apt-transport-https`。
 </div>
 
-
+该文档的编写参考了 [USTCLUG 的 Ubuntu 源使用帮助](https://mirrors.ustc.edu.cn/help/ubuntu.html)。
 

@@ -1,16 +1,13 @@
-# FAQ
+# 常见问题
 
 ## 如何退出vim?
 
-**按下ESC键，然后输入以下任一指令后按下ENTER：**
+按下 <kbd>Esc</kbd> 键，使状态栏变为 `-- NORMAL --`。然后输入以下任一指令后按下 <kbd>Enter</kbd>
 
-1. :x 保存文件并**退出**vim
-2. :wq 保存文件并**退出**vim
-3. :q! 不保存文件，强制**退出**vim
+* `:x` 保存文件并**退出**
+* `:wq` 保存文件并**退出**
+* `:q!` 不保存文件，强制**退出**
 
 ## 如何申请镜像
 
-[点击这里提个issue](https://github.com/dglinux/issues/issues/new)
-
-
-
+在我们的 [Issues 页面](https://github.com/dglinux/issues/issues)下创建请求。也可以在已有的请求页面下回复 `+1` 或点赞，我们会添加关注度高的镜像。
